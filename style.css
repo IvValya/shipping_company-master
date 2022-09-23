@@ -1,0 +1,1359 @@
+@font-face {
+    font-family: "Calibri-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Calibri.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Calibri-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/calibri-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PermianSlabSerifTypeface-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/PermianSlabSerifTypeface-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "PermianSlabSerifTypeface-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/PermianSlabSerifTypeface.otf") format("truetype");
+}
+
+html {
+    background-color: #E5E5E5;;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    font-family: 'Calibri-Regular';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'PermianSlabSerifTypeface-Regular';
+}
+
+h1 {
+    font-size: 41px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Calibri-Bold";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    color: #5384C3;
+}
+
+a, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: #F07E13;
+    height: 44px;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+img {
+    padding: 0;
+}
+
+input, textarea {
+    padding: 10px;
+}
+
+/* GENERAL CLASSES*/
+
+.navigation_crumbs-wrp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation_crumbs {
+    width: 1200px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.navigation_crumbs a {
+    display: flex;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding: 0 10px;
+
+}
+
+.main-nav-a {
+    font-family: "Calibri-Bold";
+    font-size: 18px;
+    color: white;
+}
+
+.price {
+    font-family: "Calibri-Bold";
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 0.46px;
+    color: #5384C3;
+    text-align: center;
+}
+
+.footer-a {
+    font-family: "Calibri-Bold";
+    font-size: 18px;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.nav-a {
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+}
+
+/*HEADER-----------------------------*/
+
+/*header {
+
+}
+.header {
+  background: #003B66;
+}
+*/
+.site-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.color1 {
+    background-color: #003B66;
+}
+
+.color2 {
+    background-color: white;
+}
+
+/*  .logo {
+    position:fixed;
+    left:9%;
+  }
+  */
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #003B66;
+    min-height: 121px;
+    width: 100%;
+}
+
+.navigation {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+
+}
+
+.color-header1 {
+    width: 100%;
+    background-color: #003B66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.color-header2 {
+    width: 100%;
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-product {
+    width: 100%;
+    display: flex;
+    min-height: 80px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+
+
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-product a  {
+
+    color: #949494;
+
+}
+
+.nav-product a:active {
+    color:black;
+}
+
+.boats-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+
+}
+
+.icon-excursion {
+    flex-grow: 1;
+}
+
+.icon-boats {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+/*Главная страница-----------------------*/
+
+.main-page {
+    text-transform: uppercase;
+    position: relative;
+}
+
+.main-img {
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*.main-title {
+  position: absolute;
+  top:10%;
+  left: 30%;
+  color:white;
+  text-align: center;
+}
+*/
+.monarch {
+    position: relative;
+}
+
+.nav-monarch {
+    position: relative;
+    height: 50px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+}
+
+.ships_title {
+    font-family: 'PermianSlabSerifTypeface';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    color: #B4B4B4;
+    margin-right: 100px;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    min-height: 65px;
+    max-height: 65px;
+    transform: rotate(180deg);
+}
+
+.high_waves {
+    background-color: #fff !important;
+    height: 1px !important;
+    border-top: 10px solid #fff !important;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+.form-input label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.form-input {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.ship_info-wrp {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 100px;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 5px;
+}
+
+.gallery-col {
+    width: calc(50% - 5px);
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.gallery_img_2 {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery_img_4 {
+    width: calc(100% - 5px);
+    height: calc(50% - 5px);
+}
+
+.gallery_img_8 {
+    width: calc(50% - 5px);
+    height: 50%;
+}
+
+.gallery_img img {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+}
+
+.ship_info {
+    width: 60%;
+}
+
+.order_form {
+    width: 30%;
+    box-shadow: 0px 10px 10px rgb(0 0 0 / 4%), 0px 20px 25px -5px rgb(0 0 0 / 10%);
+    padding: 25px;
+    position: absolute;
+    right: 0;
+    top: -90px;
+    background-color: #fff;
+}
+
+.order_form h2 {
+    font-family: PermianSlabSerifTypeface;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 43px;
+    margin-top: 0;
+}
+
+.ship_info-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ship_info-name {
+    font-size: 28px;
+    font-family: PermianSlabSerifTypeface;
+}
+
+.ship_info-price {
+    color: #B4B4B4;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.ship_info-about_tarif {
+    color: #949494;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: underline;
+}
+
+.ship_info-cap {
+    font-family: PermianSlabSerifTypeface;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #4F4F4F;
+}
+
+.ship_info-desc {
+    margin-top: 50px;
+}
+
+.ship_info-div {
+    width: 100%;
+    height: 4px;
+    background-image: url(img/vector.svg);
+    background-size: cover;
+}
+
+.about-cols {
+    font-size: 18px;
+    line-height: 27px;
+    column-count: 2;
+    column-gap: 10%;
+    text-align: justify;
+}
+
+.about-cols p:nth-child(1) {
+    margin-top: 0 !important;
+}
+
+.active_boat, .active_boat_cap {
+    position: relative;
+}
+
+.active_boat:after, .active_boat_cap:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #f07e13;
+    display: block;
+    position: absolute;
+    bottom: -24px;
+}
+
+.active_boat_cap:after {
+    background-color: #6BA5DB;
+    bottom: -29px;
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 50px;
+        min-height: 40px;
+    }
+}
+/*
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.list-item .card-small:nth-child(2), .list-item .card-small:nth-child(5), .list-item .card-small:nth-child(8), .list-item .card-small:nth-child(11) {
+    margin: 0 89px 0 89px;
+}
+*/
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 10px;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+
+.title-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    color: #949494;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 20px;
+}
+
+.order-item {
+    flex-basis: 50%;
+    align-self: center;
+    flex-grow: 1;
+}
+
+.order-individual {
+    flex-basis: 100%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+.icons a {
+    text-decoration: underline;
+    color: #949494;
+}
+
+
+
+.info {
+    display: flex;
+    column-gap: 90px;
+    padding-bottom: 70px;
+    justify-content: space-between;
+
+    border: none;
+}
+
+.connection, .faq {
+    width: 50%;
+}
+
+.connection span {
+    text-align: center;
+}
+
+.details {
+    text-decoration: underline;
+    color: #949494;
+}
+
+/*.faq {
+  border:none;
+  background: url(img/frame-6356275@1x.png) repeat-x;
+}*/
+
+.faq .faq-li {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.faq .faq-li {
+    list-style-image: url(img/marker_minus.png); /* Убираем маркеры у списка */
+}
+
+.faq .faq-li.closed {
+    list-style-image: url(img/marker.png); /* Убираем маркеры у списка */
+}
+
+.faq-a {
+    font-weight: 700;
+    font-size: 18px;
+    color: #949494;
+}
+
+.faq-txt {
+    display: block;
+    margin-top: 20px;
+    height: auto;
+    overflow: hidden;
+    transition: height linear 0.3s;
+    text-align: justify;
+}
+
+.faq-li.closed .faq-txt {
+    height: 0;
+    margin-top: 0;
+    transition: height linear 0.3s;
+}
+
+.routes {
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 20px;
+    color: #949494;
+    font-size: 14px;
+
+}
+
+.client-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.client-contacts input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    flex-grow: 1;
+    border: 1px solid #E0E0E0;
+}
+
+.form_group-2-col {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 30px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #E0E0E0;
+}
+
+.footer-waves {
+    position: relative;
+    bottom: 0px;
+    border: none;
+    width: 100%;
+    height: 130px;
+    background-image: url(img/footer_wave.svg);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+/* Footer----------------------------*/
+
+footer {
+    border: none;
+}
+
+.footer-main {
+    background: #003B66;
+    color: white;
+}
+
+.line_div {
+    width: 100%;
+    border-bottom: 1px #fff solid;
+}
+
+.footer {
+    padding-top: 78px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    min-height: 333px;
+    justify-content: space-between;
+    align-items: top;
+
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-area: auto;
+    flex-basis: 70%;
+}
+
+.footer-nav-a {
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.footer-routs,
+.contacts,
+.footer-fleet,
+.footer-other,
+.footer-piers,
+.footer-other-nav,
+.footer-address {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts {
+
+    row-gap: 55px;
+}
+
+.footer-other {
+    justify-content: space-between;
+}
+
+.favicons {
+    align-items: flex-start;
+    width: 32px;
+    height: 32px;
+}
+
+.footer-address {
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/*.faq ul {
+  padding: 0;
+}
+*/
+
+
+.footer_delim {
+    border-top: 1px solid #FFFFFF;
+}
+
+.copyright {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 94px;
+    align-items: center;
+}
+
+/*CSS for mobile nav*/
+
+.aside {
+    display: flex;
+    background-color: #003B66;
+    top: 0;
+    z-index: 4;
+    height: 100vh;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: right linear 0.3s;
+    right: 0;
+}
+
+
+
+.aside.hidden {
+    right: -100vw;
+    transition: right linear 0.3s;
+}
+
+.aside_wrp {
+    height: 100vh;
+    overflow: hidden;
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-aside {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.aside-nav {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+
+.aside-nav a {
+    font-size: 20px;
+    font-family: Calibri-Bold;
+    font-style: normal;
+    font-weight: 700;
+    text-align: right;
+    color: white;
+    line-height: 50px;
+}
+
+.aside-footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+    color: white;
+    align-items: end;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.aside-footer a {
+    font-size: 20px;
+    font-family: "Calibri-Bold", Helvetica;
+}
+
+/*CSS для теплохода "Монарх"*/
+
+.card-small {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.card-big {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.description-product {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+}
+
+.summary-ship {
+    font-family: Calibri-Regular;
+    line-height: 17px;
+    text-align: justify;
+
+}
+
+.nav-img {
+    display: none;
+    position: absolute;
+    right: 10%;
+}
+
+.main_logo_name {
+    position: absolute;
+    color: #fff;
+    top: 140px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PermianSlabSerifTypeface-Regular';
+}
+
+.main_logo_name img {
+    width: 850px;
+}
+
+.main_logo_name div {
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.route_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.route_name {
+    text-transform: uppercase;
+    color: #5384c3;
+    font-family: "Calibri-Bold", "Helvetica";
+    font-size: 16px;
+}
+
+.route_dur {
+    color: #848484;
+    font-size: 16px;
+    font-family: "Calibri-Bold", "Helvetica";
+}
+
+.route_txt {
+    font-size: 14px;
+}
+
+.route_about {
+    color: #939393;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.route_info_bot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show_all {
+    color: #a8a8a8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 25px;
+    font-family: PermianSlabSerifTypeface-Bold;
+}
+
+.divider {
+    background-image: url(img/divider.svg);
+    background-size: contain;
+    height: 40px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.divider.footer-divider {
+    background-image: url(img/footer_divider.svg);
+}
+
+.container.full {
+    max-width: 100%;
+}
+
+.card-small-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav .footer-nav-a {
+    font-family: 'Calibri-Bold';
+}
+
+.main_wrp {
+    position: relative;
+    overflow: hidden;
+}
+
+.ship_info-services {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+
+.ship_info-service {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.ship_info-services img {
+    height: 24px;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+
+    .container {
+        max-width: 95%;
+     }
+
+     .icon-boats {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 10px;
+        justify-content: space-around;
+      }
+
+     .main-nav-a {
+        display: none;
+    }
+
+    .nav-img {
+        display: block;
+    }
+
+    .nav-img:hover aside {
+        display: block;
+    }
+
+    .contacts {
+        max-width: 200px;
+        row-gap: 70px;
+        margin-left: 10%;
+      }
+
+      .footer-routs, 
+      .footer-fleet,
+      .footer-piers  {
+        min-width: 200px;
+      }
+      .footer {
+        column-gap: 20px;
+      }
+    .footer-nav {
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        row-gap: 30px;
+        flex-basis: 70%;
+        justify-content: space-between;
+      }
+      .card-small {
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+    }
+    
+    }
+    
+
+
+
+@media screen and (max-width: 600px) {
+    .divider.footer-divider {
+        background-image: url(img/footer_divider_mobile.svg);
+    }
+
+    .divider {
+        background-image: url(img/divider_mobile.svg);
+    }
+
+    .main-nav-a {
+        display: none;
+    }
+
+    .nav-img {
+        display: block;
+    }
+
+    .icon-boats {
+
+
+        /*display: flex;
+        flex-direction: column;
+        align-items: center;*/
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 10px;
+        justify-content: space-around;
+    }
+
+    .nav-img:hover aside {
+        display: block;
+    }
+
+    .contacts {
+        max-width: 200px;
+        row-gap: 55px;
+        margin-left: 135px;
+    }
+
+    .footer-routs,
+    .footer-fleet,
+    .footer-piers {
+        min-width: 200px;
+    }
+
+    .footer-nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        row-gap: 30px;
+        flex-basis: 70%;
+    }
+
+    .client-contacts input {
+        display: block;
+        height: 50px;
+        flex-basis: 100%;
+        flex-grow: 1;
+        border: 1px solid #E0E0E0;
+    }
+
+    .color-header2 {
+        display: none;
+    }
+
+    .color-header2.mobile {
+        display: block;
+    }
+
+    .boats-nav {
+        row-gap: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .active_boat:after, .active_boat_cap:after {
+        height: 5px;
+        bottom: -20px;
+    }
+
+    .boats-nav a {
+        width: 100%;
+    }
+
+    .icon-boats {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 75%;
+        margin-left: 10%;
+    }
+
+    .main-nav {
+        min-height: 100px;
+    }
+
+    .nav-img {
+        background-color: #004679;
+        padding: 18px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -20px;
+    }
+
+    .footer-waves {
+        height: 100px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0px;
+    }
+
+    main, footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .copyright {
+        flex-direction: column;
+        font-size: 11px;
+        justify-content: center;
+    }
+
+    .copyright .nav-a {
+        font-size: 11px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 30px;
+        font-family: 'Calibri-Bold';
+    }
+
+    .contacts {
+        margin-left: 0;
+        max-width: none;
+        width: 100%;
+        row-gap: 30px;
+    }
+
+    .footer-address {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer-nav {
+        margin-top: 30px;
+    }
+
+    .footer-nav .footer-nav-a {
+        padding-bottom: 10px;
+        font-family: 'Calibri-Bold';
+        font-size: 16px;
+    }
+
+    .footer-nav .nav-a {
+        font-size: 14px;
+    }
+
+    .main_logo_name {
+        top: 0;
+    }
+
+    .main_logo_name img {
+        display: none;
+    }
+
+    .main_logo_name div .dot_ext {
+        display: none;
+    }
+
+    .main_logo_name div {
+        font-size: 20px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    .list-item .card-small {
+        width: 100%;
+        margin: auto !important;
+    }
+
+    .delim {
+        background-size: cover;
+        height: 30px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+
+    .about-cols {
+        display: block;
+        column-count: auto;
+        column-gap: unset;
+    }
+
+    .connection, .faq {
+        width: auto;
+    }
+
+    .footer.container {
+        width: 100%;
+    }
+
+    .container.full {
+        width: 100%;
+    }
+
+    .navigation_crumbs {
+        column-gap: 5px;
+    }
+
+    .navigation_crumbs-wrp {
+        height: 40px;
+    }
+
+    .ship_info-wrp {
+        display: block;
+    }
+
+    .ship_info {
+        width: 100%;
+    }
+
+    .order_form {
+        width: 100%;
+        position: unset;
+    }
+
+    .ship_info-div {
+        background-size: contain;
+    }
+
+    .ship_info-2 {
+        display: none;
+    }
+
+    .ship_info-name {
+        margin-bottom: 5px;
+    }
+
+    .ship_info-services {
+        column-gap: 18px;
+        row-gap: 20px;
+    }
+
+    .gallery {
+        height: auto;
+    }
+
+    .gallery-col {
+        width: 100%;
+    }
+}
+

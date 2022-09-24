@@ -114,7 +114,7 @@ input, textarea {
 .container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1440px;
+    max-width: 1200px;
     padding: 0 10px;
 
 }
@@ -303,6 +303,12 @@ input, textarea {
     color: #B4B4B4;
     margin-right: 100px;
 }
+.map_piers {
+width: 100%;
+height: 100%;
+object-fit: cover;
+max-height: 612px;
+}
 
 .waves {
     position: relative;
@@ -359,15 +365,19 @@ input, textarea {
 
 .form-input {
     margin-bottom: 15px;
+    height: 50px;
     width: 100%;
+    justify-content: space-between;
 }
 
 .ship_info-wrp {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     column-gap: 100px;
     position: relative;
 }
+
 
 .gallery {
     display: flex;
@@ -418,6 +428,7 @@ input, textarea {
     right: 0;
     top: -90px;
     background-color: #fff;
+   
 }
 
 .order_form h2 {
@@ -430,8 +441,19 @@ input, textarea {
 
 .ship_info-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+}
+.ship_info-1 {
+    flex-basis: 30%;
+}
+
+.ship_info-2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    justify-items: end;
+   align-items: flex-end;
 }
 
 .ship_info-name {
@@ -531,8 +553,7 @@ input, textarea {
     row-gap: 30px;
     column-gap: 10px;
     width: 100%;
-    padding-bottom: 40px;
-}
+   }
 
 
 .title-card {
@@ -631,7 +652,7 @@ input, textarea {
     height: auto;
     overflow: hidden;
     transition: height linear 0.3s;
-    text-align: justify;
+  /*  text-align: justify;*/
 }
 
 .faq-li.closed .faq-txt {
@@ -657,10 +678,17 @@ form {
 
 .client-contacts {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column;
+    column-gap: 10px;
+     width: 100%;
     justify-content: space-between;
-}
+  }
+
+.form-input {
+    display:flex;
+    flex-direction: column;
+    row-gap: 5px;
+    }
 
 
 .client-contacts input {
@@ -992,11 +1020,16 @@ footer {
 }
 
 .ship_info-services {
-    display: flex;
+
+display: grid;
+grid-template-columns: auto auto auto auto;
+row-gap: 30px;
+    /*display: flex;
     flex-wrap: wrap;
     column-gap: 100px;
-    row-gap: 30px;
-    justify-content: space-between;
+    
+    justify-content: space-between;*/
+    width: 60%;
 }
 
 .ship_info-service {
@@ -1014,19 +1047,47 @@ footer {
 
 @media screen and (max-width: 900px) {
 
+    .main_logo_name img{
+        width:698px;
+        height: auto;
+    }
+
+    .main_logo_name div {
+        
+    font-weight: 700;
+    font-size: 18px;
+    }
+
+
 
     .container {
         max-width: 95%;
      }
+
+     .client-contacts {
+       
+        flex-direction: column;
+     }
+
+     .boats-nav {
+        align-items: flex-end;
+     }
+
+    .navigation_crumbs-wrp {
+        display: none;
+    }
 
      .icon-boats {
         display:flex;
         flex-direction: column;
         align-items: center;
         column-gap: 10px;
-        justify-content: space-around;
-      }
-
+        row-gap: 5px;
+        justify-content: space-between;
+        }
+        .icon-boats:first-child {
+            row-gap: 0;
+        }
      .main-nav-a {
         display: none;
     }
@@ -1066,7 +1127,45 @@ footer {
         flex-direction: column;
         width: 49%;
     }
-    
+    /*-------------------------------------*/
+.ship_info {
+    display:flex;
+    flex-direction: column;
+    overflow-x: visible;
+    width: 100%;
+}
+
+.order_form {
+    position: absolute;
+    top: 100px;
+    width: 40%;
+}
+
+.form_group-1-col {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 30px;
+}
+
+/*.ship_info-desc {
+    width: 50%;
+}*/
+/*----------------------------------------
+.client-contacts input {
+    display: block;
+    height: 50px;
+    flex-basis: 100%;
+    flex-grow: 1;
+    border: 1px solid #E0E0E0;
+}
+*/
+
+/*-----------------------------------------*/
+
     }
     
 
@@ -1091,10 +1190,6 @@ footer {
 
     .icon-boats {
 
-
-        /*display: flex;
-        flex-direction: column;
-        align-items: center;*/
         display: grid;
         grid-template-columns: auto auto auto;
         column-gap: 10px;

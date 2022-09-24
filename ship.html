@@ -153,8 +153,9 @@
                 </div>
             </div>
         </section>
+
         <section class="ship_info-wrp container">
-            <div class="ship_info">
+            
                 <div class="ship_info-main">
                     <div class="ship_info-1">
                         <h2 class="ship_info-name">Теплоход «Монарх»</h2>
@@ -165,12 +166,60 @@
                         <a href="#" class="ship_info-about_tarif">подробнее о тарифе</a>
                     </div>
                 </div>
-                <div class="ship_info-desc">
-                    <p>Теплоход «Монарх» — флагман флота компании «Смольнинское параходство». Этот современный и комфортабельный лайнер может принять на своем борту 60 человек.</p>
-                    <p>Взяв в аренду «Монарх», вы сможете отпраздновать свой день рождения, свадьбу, выпускной или корпоративный праздник. Судно также идеально подходит для экскурсионных прогулок по рекам и каналам Петербурга.</p>
-                    <p>Экскурсия на теплоходе «Монарх» пройдет удачно при любой погоде, ведь в случае ненастья вы сможете спуститься в уютный салон.</p>
+
+
+           
+                <div class="ship_info">
+                    <div class="ship_info-desc">
+                        <p>Теплоход «Монарх» — флагман флота компании «Смольнинское параходство». Этот современный и комфортабельный лайнер может принять на своем борту 60 человек.</p>
+                        <p>Взяв в аренду «Монарх», вы сможете отпраздновать свой день рождения, свадьбу, выпускной или корпоративный праздник. Судно также идеально подходит для экскурсионных прогулок по рекам и каналам Петербурга.</p>
+                        <p>Экскурсия на теплоходе «Монарх» пройдет удачно при любой погоде, ведь в случае ненастья вы сможете спуститься в уютный салон.</p>
+                        <div class="ship_info-div"></div>
+                    </div>
+                    
+                    
+                    <div class="order_form">
+                        <h2>Арендовать теплоход</h2>
+                        <form method="post" action="">
+                            <div class="client-contacts">
+                                <div class="form_group-1-col">
+                                    <div class="form-input">
+                                        <label>Дата</label>
+                                        <input type="text" name="date" placeholder="Выберите дату"
+                                            required="">
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Время</label>
+                                        <input type="text" name="time" placeholder="Выберите время"
+                                            required="">
+                                    </div>
+                                </div>
+                                <div class="form_group-2-col">
+                                    <div class="form-input">
+                                        <label>Имя</label>
+                                        <input type="text" name="name" placeholder="Ваше имя"
+                                            required="">
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Количество человек</label>
+                                        <input type="text" name="count" placeholder="__"
+                                            required="" max="99">
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label>Телефон</label>
+                                    <input type="tel" name="phone" placeholder="+7___ ___ __ __"
+                                        required="">
+                                </div>
+                            </div>
+                            <button type="submit" name="SubmitForm" value="submit-form">Заказать</button>
+                            <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
+                                                                        href="">политикой конфидециальности</a></span>
+                        </form>
+                    </div>
                 </div>
-                <div class="ship_info-div"></div>
+
+
                 <div>
                     <h2>На борту</h2>
                     <div class="ship_info-services">
@@ -208,45 +257,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="order_form">
-                <h2>Арендовать теплоход</h2>
-                <form method="post" action="">
-                    <div class="client-contacts">
-                        <div class="form-input">
-                            <label>Дата</label>
-                            <input type="text" name="date" placeholder="Выберите дату"
-                                   required="">
-                        </div>
-                        <div class="form-input">
-                            <label>Время</label>
-                            <input type="text" name="time" placeholder="Выберите время"
-                                   required="">
-                        </div>
-                        <div class="form_group-2-col">
-                            <div class="form-input">
-                                <label>Имя</label>
-                                <input type="text" name="name" placeholder="Ваше имя"
-                                       required="">
-                            </div>
-                            <div class="form-input">
-                                <label>Количество человек</label>
-                                <input type="text" name="count" placeholder="__"
-                                       required="" max="99">
-                            </div>
-                        </div>
-                        <div class="form-input">
-                            <label>Телефон</label>
-                            <input type="tel" name="phone" placeholder="+7___ ___ __ __"
-                                   required="">
-                        </div>
-                    </div>
-                    <button type="submit" name="SubmitForm" value="submit-form">Заказать</button>
-                    <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
-                                                                 href="">политикой конфидециальности</a></span>
-                </form>
-            </div>
         </section>
+
+
         <div class="divider"></div>
         <section class="gallery">
             <div class="gallery-col">
@@ -389,7 +402,7 @@
                                        required="">
                             </div>
                             <div class="form-input">
-                                <label or="client-tel">Телефон</label>
+                                <label for="client-tel">Телефон</label>
                                 <input type="tel" id="client-tel" name="client-tel" placeholder="+7___ ___ __ __"
                                        required="">
                             </div>

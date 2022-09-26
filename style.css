@@ -378,7 +378,7 @@ max-height: 612px;
     position: relative;
 }
 
-
+/*
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -416,6 +416,61 @@ max-height: 612px;
     padding: 4px;
 }
 
+*/
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow:dense;
+}
+
+
+/*
+.gallery_img_8 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  
+}
+.gallery_img_2 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.gallery_img_4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+*/
+.gallery_img_8 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gallery_img_4 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery_img_2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.gallery_img img {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+  
+}
+
+
+
+
+
 .ship_info {
     width: 60%;
 }
@@ -426,7 +481,7 @@ max-height: 612px;
     padding: 25px;
     position: absolute;
     right: 0;
-    top: -90px;
+    top: -70px;
     background-color: #fff;
    
 }
@@ -533,17 +588,6 @@ max-height: 612px;
         min-height: 40px;
     }
 }
-/*
-.list-item {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 40px;
-}
-
-.list-item .card-small:nth-child(2), .list-item .card-small:nth-child(5), .list-item .card-small:nth-child(8), .list-item .card-small:nth-child(11) {
-    margin: 0 89px 0 89px;
-}
-*/
 
 .list-item {
     display: flex;
@@ -622,10 +666,6 @@ max-height: 612px;
     color: #949494;
 }
 
-/*.faq {
-  border:none;
-  background: url(img/frame-6356275@1x.png) repeat-x;
-}*/
 
 .faq .faq-li {
     margin-bottom: 30px;
@@ -816,7 +856,7 @@ footer {
     align-items: center;
 }
 
-/*CSS for mobile nav*/
+
 
 .aside {
     display: flex;
@@ -889,7 +929,7 @@ footer {
     font-family: "Calibri-Bold", Helvetica;
 }
 
-/*CSS для теплохода "Монарх"*/
+
 
 .card-small {
     display: flex;
@@ -991,6 +1031,7 @@ footer {
 .divider {
     background-image: url(img/divider.svg);
     background-size: contain;
+    background-repeat: repeat-x;
     height: 40px;
     width: 100%;
     margin-top: 50px;
@@ -1023,19 +1064,10 @@ footer {
 
 display: grid;
 grid-template-columns: auto auto auto auto;
+align-items: center;
+justify-content: space-around;
 row-gap: 30px;
-    /*display: flex;
-    flex-wrap: wrap;
-    column-gap: 100px;
-    
-    justify-content: space-between;*/
-    width: 60%;
-}
-
-.ship_info-service {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
+width: 60%;
 }
 
 .ship_info-services img {
@@ -1058,11 +1090,11 @@ row-gap: 30px;
     font-size: 18px;
     }
 
-
-
     .container {
         max-width: 95%;
      }
+
+   
 
      .client-contacts {
        
@@ -1130,16 +1162,37 @@ row-gap: 30px;
     /*-------------------------------------*/
 .ship_info {
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     overflow-x: visible;
     width: 100%;
+    justify-content: space-between;
 }
 
-.order_form {
-    position: absolute;
-    top: 100px;
-    width: 40%;
+.ship_info-main {
+    justify-content: space-between;
 }
+.ship_info-1, .ship_info-2 {
+    flex-basis: unset;
+}
+.ship_info-desc
+{
+    width: 40%;
+    margin-top: 0;
+    padding-top: 25px;
+    line-height: 20px;
+}
+.order_form {
+    width:55%;
+    position: unset;
+    top:0;
+    box-shadow: none;
+    padding-bottom: 0;
+}
+.ship_info-services {
+    width: 100%;
+}
+/*
+
 
 .form_group-1-col {
     display: flex;
@@ -1178,6 +1231,7 @@ row-gap: 30px;
 
     .divider {
         background-image: url(img/divider_mobile.svg);
+        background-repeat: repeat-x;
     }
 
     .main-nav-a {
@@ -1443,10 +1497,18 @@ row-gap: 30px;
         row-gap: 20px;
     }
 
-    .gallery {
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+  /*  .gallery {
+        display: flex;
+        flex-direction: column;
         height: auto;
     }
-
+*/
     .gallery-col {
         width: 100%;
     }

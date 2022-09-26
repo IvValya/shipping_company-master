@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Смольнинское пароходство. Заказ катеров и теплоходов. Индивидуальные и групповые экскурсии.">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Смольнинское пароходство</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#open_mobile_menu").click(function () {
+                $("#mobile_menu").removeClass("hidden");
+                return false;
+            });
+
+            $("#close_mobile_menu").click(function () {
+                $("#mobile_menu").addClass("hidden");
+                return false;
+            });
+
+            $(".faq-li").click(function () {
+                $(".faq-li").not($(this)).addClass("closed");
+                $(this).toggleClass("closed");
+                return false;
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="main_wrp">
+    <!--Mobile nav-->
+
+    <aside id="mobile_menu" class="aside hidden">
+        <div class="aside_wrp">
+            <div class="header-aside">
+                <img src="img/Main_logo.svg" width="257px" height="56px" alt="Основной логотип">
+                <img src="img/icon-close.png" width="25px" height="25px" alt="Закрыть" id="close_mobile_menu">
+            </div>
+            <nav class="aside-nav">
+                <a class="aside-nav-a" href="">Маршруты</a>
+                <a class="aside-nav-a" href="">Флот</a>
+                <a class="aside-nav-a" href="">Причалы</a>
+                <a class="aside-nav-a" href="">События</a>
+                <a class="aside-nav-a" href="">О нас</a>
+                <a class="aside-nav-a" href="">Контакты</a>
+            </nav>
+            <div class="line_div"></div>
+            <div class="aside-footer">
+                <a href="tel:+78129416390">+7(812)941-63-90</a>
+                <span> Санкт-Петербург, наб. Мойки, дом 1/8</span>
+            </div>
+        </div>
+    </aside>
+
+    <header class="site-header">
+        <div class="color-header1">
+            <div class="main-nav container">
+                <div class="logo">
+                    <img src="img/Main_logo.svg" alt="Логотип">
+                </div>
+
+                <nav class="navigation">
+                    <a class="nav-img" href=""><img src="img/menu.svg" alt="Меню" id="open_mobile_menu"></a>
+
+
+                    <a class="main-nav-a" href="/index.html#routes">Маршруты</a>
+                    <a class="main-nav-a" href="/index.html#fleet">Флот</a>
+                    <a class="main-nav-a" href="/index.html#piers">Причалы</a>
+                    <a class="main-nav-a" href="/index.html#events">События</a>
+                    <a class="main-nav-a" href="/index.html#about">О нас</a>
+                    <a class="main-nav-a" href="/index.html#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="color-header2 mobile without-nav">
+            <div class="container nav-product without-nav">
+                <a class="icon-excursion" href="#routes">
+                    <div class="icon-boats">
+                        <img src="img/icon excursions.svg" alt="Экскурсии">
+                        <span>Экскурсии</span>
+                    </div>
+                <div class="boats-nav">
+                    <a href="#speed-boats">
+                        <div class="icon-boats">
+                            <img src="img/icon speedboat.svg" alt="Скоростные катера">
+                            <span>Скоростные катера</span>
+                        </div>
+                    </a>
+
+                    <a href="#cruise-boats">
+                        <div class="icon-boats">
+                            <img src="img/icon cruise.svg" alt="Круизные катера">
+                            <span>Круизные катера</span>
+                        </div>
+                    </a>
+
+                    <a href="#motorships" class="active_boat">
+                        <div class="icon-boats">
+                            <img src="img/icon_ship.svg" width="182px" alt="Теплоходы">
+                            <span>Теплоходы</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+
+    <!--__________________________________________________________________________________________________---->
+
+    <main>
+       
+        <div class="container">
+            <h2>Наши маршруты</h2>
+            <section id="routes">
+                <div class="list-item">
+                
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img class="individual" src="img/northern-islands.jpg" alt="индивидуальный">
+                            <div class="route_info">
+                                <div class="route_name">ИНДИВИДУАЛЬНЫй</div>
+                            </div>
+                            <p class="route_txt">Предлагаем экскурсию по шести рекам и каналам. Мы увидим самые
+                                необычные
+                                уголки
+                                Петербурга. Пройдем по зимней канавке – это один из самых очаровательных уголков старого
+                                Петербурга.</p>
+                            <span class="route_about" href="#individual">Подробнее о маршруте</span>
+                        </a>
+                        <div class="order">
+                            <button class="order-item">ОБСУДИТЬ</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img class="individual" src="img/northern-islands.jpg" alt="индивидуальный">
+                            <div class="route_info">
+                                <div class="route_name">ИНДИВИДУАЛЬНЫй</div>
+                            </div>
+                            <p class="route_txt">Предлагаем экскурсию по шести рекам и каналам. Мы увидим самые
+                                необычные
+                                уголки
+                                Петербурга. Пройдем по зимней канавке – это один из самых очаровательных уголков старого
+                                Петербурга.</p>
+                            <span class="route_about" href="#individual">Подробнее о маршруте</span>
+                        </a>
+                        <div class="order">
+                            <button class="order-ticket">БИЛЕТЫ</button>
+                            <button class="order-item">АРЕНДА</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img class="individual" src="img/northern-islands.jpg" alt="индивидуальный">
+                            <div class="route_info">
+                                <div class="route_name">ИНДИВИДУАЛЬНЫй</div>
+                            </div>
+                            <p class="route_txt">Предлагаем экскурсию по шести рекам и каналам. Мы увидим самые
+                                необычные
+                                уголки
+                                Петербурга. Пройдем по зимней канавке – это один из самых очаровательных уголков старого
+                                Петербурга.</p>
+                            <span class="route_about" href="#individual">Подробнее о маршруте</span>
+                        </a>
+                        <div class="order">
+                            <button class="order-ticket">БИЛЕТЫ</button>
+                            <button class="order-item">АРЕНДА</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img class="individual" src="img/northern-islands.jpg" alt="индивидуальный">
+                            <div class="route_info">
+                                <div class="route_name">ИНДИВИДУАЛЬНЫй</div>
+                            </div>
+                            <p class="route_txt">Предлагаем экскурсию по шести рекам и каналам. Мы увидим самые
+                                необычные
+                                уголки
+                                Петербурга. Пройдем по зимней канавке – это один из самых очаровательных уголков старого
+                                Петербурга.</p>
+                            <span class="route_about" href="#individual">Подробнее о маршруте</span>
+                        </a>
+                        <div class="order">
+                            <button class="order-ticket">БИЛЕТЫ</button>
+                            <button class="order-item">АРЕНДА</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img class="individual" src="img/northern-islands.jpg" alt="индивидуальный">
+                            <div class="route_info">
+                                <div class="route_name">ИНДИВИДУАЛЬНЫй</div>
+                            </div>
+                            <p class="route_txt">Предлагаем экскурсию по шести рекам и каналам. Мы увидим самые
+                                необычные
+                                уголки
+                                Петербурга. Пройдем по зимней канавке – это один из самых очаровательных уголков старого
+                                Петербурга.</p>
+                            <span class="route_about" href="#individual">Подробнее о маршруте</span>
+                        </a>
+                        <div class="order">
+                            <button class="order-ticket">БИЛЕТЫ</button>
+                            <button class="order-item">АРЕНДА</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img class="individual" src="img/northern-islands.jpg" alt="индивидуальный">
+                            <div class="route_info">
+                                <div class="route_name">ИНДИВИДУАЛЬНЫй</div>
+                            </div>
+                            <p class="route_txt">Предлагаем экскурсию по шести рекам и каналам. Мы увидим самые
+                                необычные
+                                уголки
+                                Петербурга. Пройдем по зимней канавке – это один из самых очаровательных уголков старого
+                                Петербурга.</p>
+                            <span class="route_about" href="#individual">Подробнее о маршруте</span>
+                        </a>
+                        <div class="order">
+                            <button class="order-ticket">БИЛЕТЫ</button>
+                            <button class="order-item">АРЕНДА</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+        </div>
+
+        <div class="divider"></div>
+        <div class="container">
+            <section class="about">
+                <div class="about-cols">
+                    <p>Компания «Смольнинское Пароходство» предлагает увлекательные экскурсии и прогулки по рекам и
+                        каналам
+                        Санкт-Петербурга. Мы предоставляем в ваше распоряжение комфортабельные теплоходы высокого
+                        класса,
+                        соответствующие всем требованиям безопасности, и оборудованные средствами, сделающими ваше
+                        путешествие
+                        удобным и комфортным.</p>
+
+                    <p>К вашим услугам – команда профессиональных экскурсоводов и капитанов, которые помогут сделать
+                        вашу
+                        прогулку незабываемой.</p>
+
+                    <p>Мы предлагаем как популярные туристические маршруты, так и эксклюзивные экскурсии, в ходе
+                        которых вы
+                        увидите город с нового ракурса.</p>
+                    <p>Организованные экскурсии по водным артериям Санкт-Петербурга, индивидуальные прогулки, ночная
+                        прогулка
+                        под разведенными мостами, проведение корпоративных вечеринок, выпускных вечеров, банкетов и
+                        семейных
+                        торжеств на комфортабельном теплоходе – мы рады организовать для вас любое мероприятие.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="divider footer-divider"></div>
+
+        <section class="background-info">
+            <div class="container info">
+                <div class="faq">
+                    <h2>FAQ</h2>
+                    <ul>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Как забронировать?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А дети считаются за людей?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А с собакой к вам можно?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А можно просто катер взять на несколько часов?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Мне кажется, меня укачает</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Почему без гида дороже?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А кто гид?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="connection">
+                    <h2>Связаться с нами</h2>
+                    <form method="post" action="">
+                        <div class="client-contacts">
+                            <div class="form-input">
+                                <label for="client-name">Имя</label>
+                                <input type="text" id="client-name" name="client-name" placeholder="Ваше имя"
+                                       required="">
+                            </div>
+                            <div class="form-input">
+                                <label or="client-tel">Телефон</label>
+                                <input type="tel" id="client-tel" name="client-tel" placeholder="+7___ ___ __ __"
+                                       required="">
+                            </div>
+                        </div>
+                        <label for="client-message">Сообщение</label>
+                        <textarea rows="5" id="client-message" name="client-message"
+                                  placeholder="Текст сообщения"></textarea>
+                        <button type="submit" name="SubmitForm" value="submit-form">Отправить</button>
+                        <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
+                                                                     href="">политикой конфидециальности</a></span>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-waves"></div>
+        <div class="footer-main container full">
+            <div class="footer container">
+                <div id="contacts" class="contacts">
+                    <img src="img/Frame.svg" width="63px" height="41px" alt="Короткий логотип">
+                    <address class="footer-address">
+                        <a href="tel:+78129416390">+7(812)941-63-90</a>
+                        <a href="mailto:lodka_07@mail.ru">lodka_07@mail.ru</a>
+                        <span> Санкт-петербург, наб. Мойки, дом 1/8</span>
+                    </address>
+                </div>
+
+                <div class="footer-nav">
+
+                    <div class="footer-routs">
+                        <a class="footer-nav-a" href="/index.html#routes">Маршруты</a>
+                        <a class="nav-a" href="">Северные острова</a>
+                        <a class="nav-a" href="">Северная Венеция</a>
+                        <a class="nav-a" href="">Парадный Петербург</a>
+                        <a class="nav-a" href="">Весь Петербург</a>
+                        <a class="nav-a" href="">Реки и каналы</a>
+                        <a class="nav-a" href="">Залив и пригороды</a>
+                    </div>
+                    <div class="footer-fleet">
+                        <a class="footer-nav-a" href="/index.html#fleet">Флот</a>
+                        <a class="nav-a" href="">Весь флот</a>
+                        <a class="nav-a" href="">Теплоходы</a>
+                        <a class="nav-a" href="">Яхты</a>
+                        <a class="nav-a" class="nav-a" href="">Катера</a>
+                        <a class="nav-a" class="nav-a" href="">Скоростные катера</a>
+                    </div>
+                    <div class="footer-piers">
+                        <a class="footer-nav-a" href="/index.html#piers">Причалы</a>
+                        <a class="nav-a" href="">Набережная Фонтанки 34</a>
+                        <a class="nav-a" href="">Набережная Фонтанки 142</a>
+                        <a class="nav-a" href="">Набережная Мойки 23</a>
+                        <a class="nav-a" href="">Павильон Зодчего Росси</a>
+                        <a class="nav-a" href="">Медный Всадник</a>
+                        <a class="nav-a" href="">Адмиралтейская наб. 8</a>
+                        <a class="nav-a" href="">Летний сад</a>
+
+                    </div>
+                    <div class="footer-other">
+                        <div class="footer-other-nav">
+                            <a class="footer-nav-a" href="">События</a>
+                            <a class="footer-nav-a" href="/index.html#about">О нас</a>
+                            <a class="footer-nav-a" href="/index.html#contacts">Контакты</a>
+                        </div>
+                        <a href=""><img class="favicons" src="img/VK.svg" alt="ВКонтакте"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_delim"></div>
+            <div class="copyright container">
+                <p> &COPY; Все права защищены. Смольнинское пароходство 2022</p>
+                <a class="nav-a" href="">Разработка и продвижение сайта ONE GOGH</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+
+</html>

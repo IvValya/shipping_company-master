@@ -370,7 +370,7 @@ max-height: 612px;
     justify-content: space-between;
 }
 
-.ship_info-wrp {
+.ship_info-wrp, .piers_info-wrp  {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -494,7 +494,7 @@ max-height: 612px;
     margin-top: 0;
 }
 
-.ship_info-main {
+.ship_info-main, .route_main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -531,12 +531,35 @@ max-height: 612px;
     text-decoration: underline;
 }
 
-.ship_info-cap {
+.ship_info-cap, .piers_info-cap {
     font-family: PermianSlabSerifTypeface;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     color: #4F4F4F;
+}
+.piers_info-desc {
+    margin-top: 50px;
+    flex-basis: 50%;
+
+}
+.piers_info {
+    display: flex;
+    column-gap: 90px;
+}
+
+.piers_button {
+    margin-top: 50px;
+    width: 70%;
+    background-color: #003B66;
+}
+
+.map_piers-item {
+    flex-basis: 50%;
+}
+
+.map_piers-item img {
+    height: 70%;
 }
 
 .ship_info-desc {
@@ -614,7 +637,7 @@ max-height: 612px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+column-gap: 5px;
     padding-top: 20px;
 }
 
@@ -622,6 +645,13 @@ max-height: 612px;
     flex-basis: 50%;
     align-self: center;
     flex-grow: 1;
+}
+
+.order-ticket {
+    flex-basis: 50%;
+    align-self: center;
+    flex-grow: 1;
+    background-color:  #6BA5DB;
 }
 
 .order-individual {
@@ -1103,6 +1133,7 @@ width: 60%;
 
      .boats-nav {
         align-items: flex-end;
+        column-gap: 20px;
      }
 
     .navigation_crumbs-wrp {
@@ -1241,7 +1272,9 @@ width: 60%;
     .nav-img {
         display: block;
     }
-
+.nav-product.without-nav {
+    display: none;
+}
     .icon-boats {
 
         display: grid;

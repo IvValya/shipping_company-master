@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Смольнинское пароходство. Заказ катеров и теплоходов. Индивидуальные и групповые экскурсии.">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Смольнинское пароходство</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#open_mobile_menu").click(function () {
+                $("#mobile_menu").removeClass("hidden");
+                return false;
+            });
+
+            $("#close_mobile_menu").click(function () {
+                $("#mobile_menu").addClass("hidden");
+                return false;
+            });
+
+            $(".faq-li").click(function () {
+                $(".faq-li").not($(this)).addClass("closed");
+                $(this).toggleClass("closed");
+                return false;
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="main_wrp">
+    <!--Mobile nav-->
+
+    <aside id="mobile_menu" class="aside hidden">
+        <div class="aside_wrp">
+            <div class="header-aside">
+                <img src="img/Main_logo.svg" width="257px" height="56px" alt="Основной логотип">
+                <img src="img/icon-close.png" width="25px" height="25px" alt="Закрыть" id="close_mobile_menu">
+            </div>
+            <nav class="aside-nav">
+                <a class="aside-nav-a" href="">Маршруты</a>
+                <a class="aside-nav-a" href="">Флот</a>
+                <a class="aside-nav-a" href="">Причалы</a>
+                <a class="aside-nav-a" href="">События</a>
+                <a class="aside-nav-a" href="">О нас</a>
+                <a class="aside-nav-a" href="">Контакты</a>
+            </nav>
+            <div class="line_div"></div>
+            <div class="aside-footer">
+                <a href="tel:+78129416390">+7(812)941-63-90</a>
+                <span> Санкт-петербург, наб. Мойки, дом 1/8</span>
+            </div>
+        </div>
+    </aside>
+
+
+    <header class="site-header">
+
+        <div class="color-header1">
+            <div class="main-nav container">
+                <div class="logo">
+                    <img src="img/Main_logo.svg" alt="Логотип">
+                </div>
+
+                <nav class="navigation">
+                    <a class="nav-img" href=""><img src="img/menu.svg" alt="Меню" id="open_mobile_menu"></a>
+
+
+                    <a class="main-nav-a" href="/index.html#routes">Маршруты</a>
+                    <a class="main-nav-a" href="/index.html#fleet">Флот</a>
+                    <a class="main-nav-a" href="/index.html#piers">Причалы</a>
+                    <a class="main-nav-a" href="/index.html#events">События</a>
+                    <a class="main-nav-a" href="/index.html#about">О нас</a>
+                    <a class="main-nav-a" href="/index.html#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="color-header2">
+            <div class="container nav-product">
+                <a class="icon-excursion" href="#routes">
+                    <div class="icon-boats">
+                        <img src="img/icon excursions.svg" alt="Экскурсии">
+                        <span>Экскурсии</span>
+                    </div>
+                </a>
+                <div class="boats-nav">
+                    <a href="#speed-boats">
+                        <div class="icon-boats">
+                            <img src="img/icon speedboat.svg" alt="Скоростные катера">
+                            <span>Скоростные катера</span>
+                        </div>
+                    </a>
+
+                    <a href="#cruise-boats">
+                        <div class="icon-boats">
+                            <img src="img/icon cruise.svg" alt="Круизные катера">
+                            <span>Круизные катера</span>
+                        </div>
+                    </a>
+
+                    <a href="#motorships">
+                        <div class="icon-boats">
+                            <img src="img/icon_ship.svg" width="182px" alt="Теплоходы">
+                            <span>Теплоходы</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+    <!--__________________________________________________________________________________________________---->
+
+    <main>
+        <section class="monarch">
+            <img class="main-img" src="img/front_Peter.jpg">
+            <div class="high_waves" style="background-color: transparent;height: 0.61%;left: 0px;position: absolute;top: 0;width: 100%;">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"/>
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="navigation_crumbs-wrp">
+                <div class="navigation_crumbs container">
+                    <a href="#">
+                        <img src="img/arrow.png">
+                    </a>
+                    <a href="#">Наши маршруты</a>
+                    <a href="#">|</a>
+                    <a href="#"> Парадный Петербург — обзорная экскурсия</a>
+                 
+                </div>
+            </div>
+        </section>
+
+        <section class="route_info-wrp container">
+            
+                <div class="route_main">
+                    <div class="route_info-1">
+                        <h2 class="piers-info-name">Парадный Петербург — обзорная экскурсия</h2>
+                        <div class="piers_info-cap">Длительность: 1 час</div>
+                    </div>
+                  
+                </div>
+
+
+           
+                <div class="route_info">
+                    <div class="ship_info-desc">
+                        <p>Увлекательная экскурсия по главным водным артериям Санкт-Петербурга. В ходе нее вы вблизи увидите главные
+                             достопримечательности города, узнаете историю их создания и множество интересных исторических фактов. Абсолютный 
+                             хит среди гостей и жителей Петербурга!
+                        </p>
+                        <p><b>Теплоход:</b> однопалубный, класс «Фонтанка».</p>
+                        <p><b>Вместимость:</b> 50 человек</p>
+                        <p>Экскурсия проводится на русском языке.</p>
+                        <div class="ship_info-div"></div>    
+                                                   
+                        <p><b>Стоимость билетов</b></p>
+                           <p>
+                            Взрослый — 1000 р <br>
+                            Студенческий — 900 р <br>
+                            Льготный — 700 р
+                            </p>
+                        
+                    </div>
+                    
+                    
+                    <div class="order_form-route">
+                      <div class="tabs">
+                        <label class="tab">Билеты</label>
+                        <label class="tab unactive">Аренда</label>
+                     </div>
+                        <form class="form_ticket" method="post" action="">
+                            <div class="client-contacts">
+                                <div class="form_group-2-col">
+                                    <div class="form-input">
+                                        <label>Дата</label>
+                                        <input type="date" name="date" placeholder="Выберите дату"
+                                            required="">
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Количество человек</label>
+                                        
+
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus">-</button>
+                                            <input type="text" class="quantity" value="2" data-max-count="20">
+                                            <button class="bt_plus">+</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <p>Вы можете начать экскурсию на причалах:</p>
+                                <div class="radio">
+                                    <div class="radio-item">
+                               
+                                        <input type="radio" id="moyka23" name="pier" value="moyka23" checked>
+                                        <label for="moyka23">Мойка 23</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="fontanka34" name="pier" value="fontanka34" >
+                                        <label for="fontanka34">Фонтанка 34</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="Rossi" name="pier" value="Rossi" >
+                                        <label for="Rossi">Павильон Зодчего Росси</label>
+                                    </div>
+                           
+                                </div>
+                            <p>Выберите время:</p>   
+                            <div class="form_time">
+                                <div class="form_radio_btn">
+                                    <input id="radio-1" type="radio" name="time" value="1" checked>
+                                    <label for="radio-1">10:00</label>
+                                </div>
+                                 
+                                <div class="form_radio_btn">
+                                    <input id="radio-2" type="radio" name="time" value="2">
+                                    <label for="radio-2">12:30</label>
+                                </div>
+                                 
+                                <div class="form_radio_btn">
+                                    <input id="radio-3" type="radio" name="time" value="3">
+                                    <label for="radio-3">14:00</label>
+                                </div>
+                                 
+                                <div class="form_radio_btn">
+                                    <input id="radio-4" type="radio" name="time" value="">
+                                    <label for="radio-4">16:00</label>
+                                </div>
+                                <div class="form_radio_btn">
+                                    <input id="radio-5" type="radio" name="time" value="2">
+                                    <label for="radio-5">12:30</label>
+                                </div>
+                                 
+                                <div class="form_radio_btn">
+                                    <input id="radio-6" type="radio" name="time" value="3">
+                                    <label for="radio-6">14:00</label>
+                                </div>
+                                 
+                                <div class="form_radio_btn">
+                                    <input id="radio-7" type="radio" name="time" value="" >
+                                    <label for="radio-7">16:00</label>
+                                </div>
+                                </div>                         
+                                    <div class="form-input">
+                                            <label>Имя</label>
+                                            <input type="text" name="name" placeholder="Ваше имя"
+                                                required="">
+                                    </div>                                 
+                                
+                                    <div class="form-input">
+                                        <label>Телефон</label>
+                                        <input type="tel" name="phone" placeholder="+7___ ___ __ __"
+                                            required="">
+                                    </div>
+                         </div>
+                            <button type="submit" name="SubmitForm" value="submit-form">Заказать билеты</button>
+                            <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
+                                                                        href="">политикой конфидециальности</a></span>
+                        </form>
+
+                        <form class="form_rent" method="post" action="">
+                            <div class="client-contacts">
+                                <div class="form_group-2-col">
+                                    <div class="form-input">
+                                        <label>Дата</label>
+                                        <input type="date" name="date" placeholder="Выберите дату"
+                                            required="">
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Количество человек</label>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus">-</button>
+                                            <input type="text" class="quantity" value="2" data-max-count="20">
+                                            <button class="bt_plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Вы можете начать экскурсию на причалах:</p>
+                                <div class="radio">
+                                    <div class="radio-item">
+                               
+                                        <input type="radio" id="moyka23" name="pier" value="moyka23" checked>
+                                        <label for="moyka23">Мойка 23</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="fontanka34" name="pier" value="fontanka34" >
+                                        <label for="fontanka34">Фонтанка 34</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="Rossi" name="pier" value="Rossi" >
+                                        <label for="Rossi">Павильон Зодчего Росси</label>
+                                    </div>
+                           
+                                </div>
+                                    <div class="form-input">
+                                        <label>Время</label>
+                                        <input type="time" name="time" placeholder="Выберите время"
+                                            required="">
+                                    </div>
+                               
+                                <div class="form_group-2-col">
+                                    <div class="form-input">
+                                        <label>Имя</label>
+                                        <input type="text" name="name" placeholder="Ваше имя"
+                                            required="">
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-input">
+                                    <label>Телефон</label>
+                                    <input type="tel" name="phone" placeholder="+7___ ___ __ __"
+                                        required="">
+                                </div>
+                                <p>Выберите теплоход</p>
+                                <select class="form_rent-ship">
+                                    <option>Монарх</option>
+                                    <option>Монарх</option>
+                                    <option>Монарх</option>
+                                    <option>Монарх</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" name="SubmitForm" value="submit-form">Арендовать теплоход</button>
+                            <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
+                                                                        href="">политикой конфидециальности</a></span>
+                        </form>
+                    </div>
+                </div>
+        </section>
+
+<section class="container route_map">
+    <h2>Маршрут: Фонтанка, Мойка, Зимняя Канавка, Нева, Фонтанка</h2>
+    <img class="route_img" src="img/front_Petersburg.jpg" alt="Маршрут парадного Петербурга">
+    <img class="route_img-small" src="img/front_Peter-small.jpg" alt="Маршрут парадного Петербурга">
+</section>
+
+
+
+        <div class="container">
+            <section id="fleet">
+                <h2>Аренда судна по этому маршруту</h2>
+                <div class="list-item">
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img src="img/sputnik.jpg" alt="скоростной катер «спутник»">
+                            <h3>скоростной катер «спутник»</h3>
+                            <span class="summary-ship">Пассажировместимость 11 человек</span>
+                            <div class="icons">
+                                <img src="img/TV.svg" title="Телевизор" alt="Телевизор">
+                                <img src="img/guide.svg" title="Аудиосистема" alt="Аудиосистема">
+                                <img src="img/karaoke.svg" title="Гид" alt="Гид">
+                                <img src="img/WIFI.svg" title="WiFi" alt="WiFi">
+                                <img src="img/kitchen.svg" title="Кухня" alt="Кухня">
+                                <img src="img/bar.svg" title="Бар" alt="Бар">
+                                <img src="img/plaid.svg" title="Плед" alt="Плед">
+                                <img src="img/WC.svg" title="Туалет" alt="Туалет">
+                            </div>
+                            <span class="details">Подробнее о судне</span>
+                        </a>
+                        <div class="order">
+                            <span class="price order-item">6000 р.</span>
+                            <button class="order-item">ЗАКАЗАТЬ</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img src="img/sputnik.jpg" alt="скоростной катер «спутник»">
+                            <h3>скоростной катер «спутник»</h3>
+                            <span class="summary-ship">Пассажировместимость 11 человек</span>
+                            <div class="icons">
+                                <img src="img/TV.svg" title="Телевизор" alt="Телевизор">
+                                <img src="img/guide.svg" title="Аудиосистема" alt="Аудиосистема">
+                                <img src="img/karaoke.svg" title="Гид" alt="Гид">
+                                <img src="img/WIFI.svg" title="WiFi" alt="WiFi">
+                                <img src="img/kitchen.svg" title="Кухня" alt="Кухня">
+                                <img src="img/bar.svg" title="Бар" alt="Бар">
+                                <img src="img/plaid.svg" title="Плед" alt="Плед">
+                                <img src="img/WC.svg" title="Туалет" alt="Туалет">
+                            </div>
+                            <span class="details">Подробнее о судне</span>
+                        </a>
+                        <div class="order">
+                            <span class="price order-item">6000 р.</span>
+                            <button class="order-item">ЗАКАЗАТЬ</button>
+                        </div>
+                    </div>
+                    <div class="card-small">
+                        <a href="#sputnik" class="card-small-link">
+                            <img src="img/sputnik.jpg" alt="скоростной катер «спутник»">
+                            <h3>скоростной катер «спутник»</h3>
+                            <span class="summary-ship">Пассажировместимость 11 человек</span>
+                            <div class="icons">
+                                <img src="img/TV.svg" title="Телевизор" alt="Телевизор">
+                                <img src="img/guide.svg" title="Аудиосистема" alt="Аудиосистема">
+                                <img src="img/karaoke.svg" title="Гид" alt="Гид">
+                                <img src="img/WIFI.svg" title="WiFi" alt="WiFi">
+                                <img src="img/kitchen.svg" title="Кухня" alt="Кухня">
+                                <img src="img/bar.svg" title="Бар" alt="Бар">
+                                <img src="img/plaid.svg" title="Плед" alt="Плед">
+                                <img src="img/WC.svg" title="Туалет" alt="Туалет">
+                            </div>
+                            <span class="details">Подробнее о судне</span>
+                        </a>
+                        <div class="order">
+                            <span class="price order-item">6000 р.</span>
+                            <button class="order-item">ЗАКАЗАТЬ</button>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="show_all">
+                    <a href="#">Показать все</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="divider"></div>
+    
+        
+        <section class="gallery">
+            <div class="gallery_img gallery_img_2">
+                <img src="img/route_2_2.jpg">
+            </div>
+            <div class="gallery_img gallery_img_8">
+                <img src="img/route_1_1-1.jpg">
+            </div>
+            <div class="gallery_img gallery_img_8">
+                <img src="img/route_1_1-2.jpg">
+            </div>
+            <div class="gallery_img gallery_img_4">
+                <img src="img/route_2_1.jpg">
+            </div>
+            <div class="gallery_img gallery_img_8">
+                <img src="img/route_1_1-3.jpg">
+            </div>
+            <div class="gallery_img gallery_img_3">
+                <img src="img/route_3_1.jpg">
+            </div>
+
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <div class="divider footer-divider"></div>
+
+        <section class="background-info">
+            <div class="container info">
+                <div class="faq">
+                    <h2>FAQ</h2>
+                    <ul>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Как забронировать?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А дети считаются за людей?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А с собакой к вам можно?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А можно просто катер взять на несколько часов?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Мне кажется, меня укачает</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Почему без гида дороже?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А кто гид?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="connection">
+                    <h2>Связаться с нами</h2>
+                    <form method="post" action="">
+                        <div class="client-contacts">
+                            <div class="form-input">
+                                <label for="client-name">Имя</label>
+                                <input type="text" id="client-name" name="client-name" placeholder="Ваше имя"
+                                       required="">
+                            </div>
+                            <div class="form-input">
+                                <label for="client-tel">Телефон</label>
+                                <input type="tel" id="client-tel" name="client-tel" placeholder="+7___ ___ __ __"
+                                       required="">
+                            </div>
+                        </div>
+                        <label for="client-message">Сообщение</label>
+                        <textarea rows="5" id="client-message" name="client-message"
+                                  placeholder="Текст сообщения"></textarea>
+                        <button type="submit" name="SubmitForm" value="submit-form">Отправить</button>
+                        <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
+                                                                     href="">политикой конфидециальности</a></span>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-waves"></div>
+        <div class="footer-main container full">
+            <div class="footer container">
+                <div id="contacts" class="contacts">
+                    <img src="img/Frame.svg" width="63px" height="41px" alt="Короткий логотип">
+                    <address class="footer-address">
+                        <a href="tel:+78129416390">+7(812)941-63-90</a>
+                        <a href="mailto:lodka_07@mail.ru">lodka_07@mail.ru</a>
+                        <span> Санкт-петербург, наб. Мойки, дом 1/8</span>
+                    </address>
+                </div>
+
+                <div class="footer-nav">
+
+                    <div class="footer-routs">
+                        <a class="footer-nav-a" href="/index.html#routes">Маршруты</a>
+                        <a class="nav-a" href="">Северные острова</a>
+                        <a class="nav-a" href="">Северная Венеция</a>
+                        <a class="nav-a" href="">Парадный Петербург</a>
+                        <a class="nav-a" href="">Весь Петербург</a>
+                        <a class="nav-a" href="">Реки и каналы</a>
+                        <a class="nav-a" href="">Залив и пригороды</a>
+                    </div>
+                    <div class="footer-fleet">
+                        <a class="footer-nav-a" href="/index.html#fleet">Флот</a>
+                        <a class="nav-a" href="">Весь флот</a>
+                        <a class="nav-a" href="">Теплоходы</a>
+                        <a class="nav-a" href="">Яхты</a>
+                        <a class="nav-a" class="nav-a" href="">Катера</a>
+                        <a class="nav-a" class="nav-a" href="">Скоростные катера</a>
+                    </div>
+                    <div class="footer-piers">
+                        <a class="footer-nav-a" href="/index.html#piers">Причалы</a>
+                        <a class="nav-a" href="">Набережная Фонтанки 34</a>
+                        <a class="nav-a" href="">Набережная Фонтанки 142</a>
+                        <a class="nav-a" href="">Набережная Мойки 23</a>
+                        <a class="nav-a" href="">Павильон Зодчего Росси</a>
+                        <a class="nav-a" href="">Медный Всадник</a>
+                        <a class="nav-a" href="">Адмиралтейская наб. 8</a>
+                        <a class="nav-a" href="">Летний сад</a>
+
+                    </div>
+                    <div class="footer-other">
+                        <div class="footer-other-nav">
+                            <a class="footer-nav-a" href="">События</a>
+                            <a class="footer-nav-a" href="/index.html#about">О нас</a>
+                            <a class="footer-nav-a" href="/index.html#contacts">Контакты</a>
+                        </div>
+                        <a href=""><img class="favicons" src="img/VK.svg" alt="ВКонтакте"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_delim"></div>
+            <div class="copyright container">
+                <p> &COPY; Все права защищены. Смольнинское пароходство 2022</p>
+                <a class="nav-a" href="">Разработка и продвижение сайта ONE GOGH</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+
+</html>

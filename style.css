@@ -1307,17 +1307,19 @@ footer {
     height: 60px;
 }
 
-.tab {
+.order_form-route .tab {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.tab.unactive {
     background-color: #D9D9D9;
     color: #858585;
+}
+
+.order_form-route .tab.active {
+    background-color: white;
+    color: black;
     height: 100%;
 }
 
@@ -1326,11 +1328,14 @@ footer {
     height: 50px;
 }
 
-.form_ticket {}
-
-.form_rent {
+.order_form-route form {
     display: none;
 }
+.order_form-route form.active {
+    display:flex;
+}
+
+
 
 .quantity_inner * {
     box-sizing: border-box;

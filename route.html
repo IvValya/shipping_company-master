@@ -11,6 +11,15 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <script>
       $(function () {
+        $(".tabs label").click(function () {
+          let dataFormId = $(this).attr("data-form_id")
+          
+          $(".tabs label").removeClass("active")
+          $(this).addClass("active")
+
+          $(".order_form-route form").removeClass("active")
+            $(".order_form-route form."+dataFormId).addClass("active")
+        })
         $("#open_mobile_menu").click(function () {
           $("#mobile_menu").removeClass("hidden");
           return false;
@@ -260,10 +269,10 @@
 
             <div class="order_form-route">
               <div class="tabs">
-                <label class="tab">Билеты</label>
-                <label class="tab unactive">Аренда</label>
+                <label data-form_id="form_ticket" class="tab active">Билеты</label>
+                <label data-form_id="form_rent" class="tab ">Аренда</label>
               </div>
-              <form class="form_ticket" method="post" action="">
+              <form class="form_ticket active" method="post" action="">
                 <div class="client-contacts">
                   <div class="form_group-2-col">
                     <div class="form-input">

@@ -27,7 +27,8 @@
 }
 
 html {
-    background-color: #E5E5E5;;
+    background-color: #E5E5E5;
+    ;
 }
 
 body {
@@ -41,7 +42,8 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'PermianSlabSerifTypeface-Regular';
 }
 
@@ -64,7 +66,8 @@ h3 {
     color: #5384C3;
 }
 
-a, a:active {
+a,
+a:active {
     text-decoration: none;
     color: inherit;
 }
@@ -85,7 +88,8 @@ img {
     padding: 0;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
 }
 
@@ -230,14 +234,14 @@ input, textarea {
     box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.nav-product a  {
+.nav-product a {
 
     color: #949494;
 
 }
 
 .nav-product a:active {
-    color:black;
+    color: black;
 }
 
 .boats-nav {
@@ -303,11 +307,12 @@ input, textarea {
     color: #B4B4B4;
     margin-right: 100px;
 }
+
 .map_piers {
-width: 100%;
-height: 100%;
-object-fit: cover;
-max-height: 612px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 612px;
 }
 
 .waves {
@@ -325,26 +330,26 @@ max-height: 612px;
     border-top: 10px solid #fff !important;
 }
 
-.parallax > use {
+.parallax>use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
     animation-delay: -2s;
     animation-duration: 7s;
 }
 
-.parallax > use:nth-child(2) {
+.parallax>use:nth-child(2) {
     animation-delay: -3s;
     animation-duration: 10s;
 }
 
-.parallax > use:nth-child(3) {
+.parallax>use:nth-child(3) {
     animation-delay: -4s;
     animation-duration: 13s;
 }
 
-.parallax > use:nth-child(4) {
+.parallax>use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
 }
@@ -353,6 +358,7 @@ max-height: 612px;
     0% {
         transform: translate3d(-90px, 0, 0);
     }
+
     100% {
         transform: translate3d(85px, 0, 0);
     }
@@ -365,13 +371,18 @@ max-height: 612px;
 
 
 
-.ship_info-wrp, .route_info-wrp {
+.ship_info-wrp,
+.route_info-wrp {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     column-gap: 100px;
     position: relative;
     font-size: 18px;
+}
+
+.route_info-wrp {
+    min-height: 720px;
 }
 
 /*
@@ -417,7 +428,7 @@ max-height: 612px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-auto-flow:dense;
+    grid-auto-flow: dense;
 }
 
 
@@ -465,7 +476,7 @@ max-height: 612px;
     width: 100%;
     height: 100%;
     padding: 4px;
-  
+
 }
 
 
@@ -484,7 +495,7 @@ max-height: 612px;
     right: 0;
     top: -70px;
     background-color: #fff;
-   
+
 }
 
 .order_form h2 {
@@ -495,14 +506,17 @@ max-height: 612px;
     margin-top: 0;
 }
 
-.ship_info-main, .route_main {
+.ship_info-main,
+.route_main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+
 .ship_info-1 {
     flex-basis: 30%;
 }
+
 .route_info-1 {
     flex-basis: 60%;
 }
@@ -512,10 +526,11 @@ max-height: 612px;
     flex-direction: column;
     flex-basis: 30%;
     justify-items: end;
-   align-items: flex-end;
+    align-items: flex-end;
 }
 
-.ship_info-name, .piers_info-name {
+.ship_info-name,
+.piers_info-name {
     font-size: 28px;
     font-family: PermianSlabSerifTypeface;
 }
@@ -534,17 +549,20 @@ max-height: 612px;
     line-height: 16px;
     text-decoration: underline;
 }
+
 .piers_info-wrp {
     display: grid;
     column-gap: 10%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 2fr auto;
 }
+
 .piers_info-main {
     grid-column: 1/2;
-} 
+}
 
-.ship_info-cap, .piers_info-cap {
+.ship_info-cap,
+.piers_info-cap {
     font-family: PermianSlabSerifTypeface;
     text-decoration: underline;
     font-size: 16px;
@@ -552,18 +570,20 @@ max-height: 612px;
     line-height: 20px;
     color: #4F4F4F;
 }
+
 .piers_info-desc {
-   /* margin-top: 50px;*/
+    /* margin-top: 50px;*/
     flex-basis: 50%;
 
 }
+
 .piers_info {
     display: flex;
     column-gap: 90px;
 }
 
 .piers_button {
-   /* margin-top: 50px;*/
+    /* margin-top: 50px;*/
     width: 70%;
     background-color: #003B66;
     text-align: center;
@@ -573,7 +593,7 @@ max-height: 612px;
 .map_piers-item {
     grid-column: 2/3;
     grid-row: 1/4;
-   /* position: absolute;
+    /* position: absolute;
     top: 24px;
     left: 51%;
     flex-basis: 50%;*/
@@ -611,19 +631,19 @@ max-height: 612px;
     height: 31px
 }
 
-.boats-nav .boat.active_boat, 
-.boats-nav .boat_cap.active_boat_cap, 
-.boats-nav .boat_cap, 
+.boats-nav .boat.active_boat,
+.boats-nav .boat_cap.active_boat_cap,
+.boats-nav .boat_cap,
 .boats-nav .boat {
 
     position: relative;
 }
 
-.boat.active_boat:after, 
-.boat.active_boat:hover::after, 
+.boat.active_boat:after,
+.boat.active_boat:hover::after,
 .boat_cap.active_boat_cap:hover::after,
 .boat_cap.active_boat_cap:after,
-.boat_cap:hover::after, 
+.boat_cap:hover::after,
 .boat:hover::after {
     content: '';
     width: 100%;
@@ -632,15 +652,16 @@ max-height: 612px;
     display: block;
     position: absolute;
     bottom: -24px;
-   
+
 }
+
 .boat:hover::after {
     background-color: grey;
     cursor: pointer;
 }
 
 
-.boat_cap.active_boat_cap:after, 
+.boat_cap.active_boat_cap:after,
 .boat_cap.active_boat_cap:hover::after {
     background-color: #6BA5DB;
     bottom: -31px;
@@ -651,7 +672,7 @@ max-height: 612px;
     background-color: grey;
     bottom: -31px;
     cursor: pointer;
-  
+
 }
 
 /*Shrinking for mobile*/
@@ -670,7 +691,7 @@ max-height: 612px;
     row-gap: 30px;
     column-gap: 10px;
     width: 100%;
-   }
+}
 
 
 .title-card {
@@ -687,7 +708,7 @@ max-height: 612px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-column-gap: 5px;
+    column-gap: 5px;
     padding-top: 20px;
 }
 
@@ -701,7 +722,7 @@ column-gap: 5px;
     flex-basis: 50%;
     align-self: center;
     flex-grow: 1;
-    background-color:  #6BA5DB;
+    background-color: #6BA5DB;
 }
 
 .order-individual {
@@ -733,7 +754,8 @@ column-gap: 5px;
     border: none;
 }
 
-.connection, .faq {
+.connection,
+.faq {
     width: 50%;
 }
 
@@ -753,11 +775,13 @@ column-gap: 5px;
 }
 
 .faq .faq-li {
-    list-style-image: url(img/marker_minus.png); /* Убираем маркеры у списка */
+    list-style-image: url(img/marker_minus.png);
+    /* Убираем маркеры у списка */
 }
 
 .faq .faq-li.closed {
-    list-style-image: url(img/marker.png); /* Убираем маркеры у списка */
+    list-style-image: url(img/marker.png);
+    /* Убираем маркеры у списка */
 }
 
 .faq-a {
@@ -772,7 +796,7 @@ column-gap: 5px;
     height: auto;
     overflow: hidden;
     transition: height linear 0.3s;
-  /*  text-align: justify;*/
+    /*  text-align: justify;*/
 }
 
 .faq-li.closed .faq-txt {
@@ -793,7 +817,7 @@ form {
     row-gap: 20px;
     color: #949494;
     font-size: 14px;
-    
+
 
 }
 
@@ -801,37 +825,42 @@ form {
     display: flex;
     flex-direction: column;
     column-gap: 10px;
-     width: 100%;
+    width: 100%;
     justify-content: space-between;
-  }
+}
+
 .order_form-route {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 10px 10px rgb(0 0 0 / 4%), 0px 20px 25px -5px rgb(0 0 0 / 10%);
-   /* padding: 25px;*/
     position: absolute;
     right: 40px;
     top: -70px;
     background-color: #fff;
     width: 37%;
 }
+
+
+
 .form-input {
-    display:flex;
+    display: flex;
     flex-direction: column;
     row-gap: 5px;
-
-        margin-bottom: 15px;
-        height: 50px;
-        width: 100%;
-        justify-content: space-between;
-    }
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .client-contacts input {
     display: block;
     height: 50px;
     width: 100%;
-    flex-grow: 1;
+ 
     border: 1px solid #E0E0E0;
+}
+
+.form-input input {
+    height: 50px;
 }
 
 .form_group-2-col {
@@ -847,26 +876,50 @@ textarea {
     width: 100%;
     border: 1px solid #E0E0E0;
 }
-.form_ticket, .form_rent {
+
+.form_ticket,
+.form_rent {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
     font-size: 18px;
 }
-.radio input{
+
+.order_form-route p,
+.order_form-route .radio-item label,
+.order_form-route .radio-item input {
+    color: black;
+}
+
+.radio input {
     height: inherit;
     width: auto;
     flex-grow: unset;
 
 }
+
 .radio-item {
     display: flex;
     column-gap: 15px;
     justify-content: flex-start;
     align-items: center;
     font-size: 18px;
-line-height: 30px;
+    line-height: 30px;
 }
+
+.radio input {
+    appearance: none;
+        width: 13px;
+        height: 13px;
+        background-clip: content-box;
+        border: 2px solid #A7A7A7;
+        border-radius: 50%;
+    }
+    
+    .radio input:checked {
+    background-color: #FF7A00;
+    }
+
 .footer-waves {
     position: relative;
     bottom: 0px;
@@ -1177,56 +1230,63 @@ footer {
 
 .ship_info-services {
 
-display: grid;
-grid-template-columns: auto auto auto auto;
-align-items: center;
-justify-content: space-around;
-row-gap: 30px;
-width: 60%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 30px;
+    width: 60%;
 }
 
 .ship_info-services img {
     height: 24px;
 }
+
 .route_map {
+
     margin-top: 120px;
 }
-.route_map img{
+
+.route_map img {
     width: 100%;
 }
+
 .form_time {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: wrap;   
 }
 
 .form_radio_btn {
-	display: inline-block;
-	margin-right: 10px;
+    display: inline-block;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
+
 .form_radio_btn input[type=radio] {
-	display: none;
+    display: none;
 }
+
 .form_radio_btn label {
-	display: inline-block;
-	cursor: pointer;	
-	font-size: 17px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 17px;
     line-height: 21px;
-	border: none;
-    
-	/*border-radius: 6px;*/
-	user-select: none;
+    border: none;
+    color: black;
+    /*border-radius: 6px;*/
+    user-select: none;
 }
- 
+
+
+
 /* Checked */
-.form_radio_btn input[type=radio]:checked + label {
-	background-color: #FF7A00;
+.form_radio_btn input[type=radio]:checked+label {
+    background-color: #FF7A00;
 }
- 
+
 /* Hover */
 .form_radio_btn label:hover {
-	color: #666;
+    color: #666;
 }
 
 .ships_title-small {
@@ -1236,56 +1296,58 @@ width: 60%;
 
 
 
-.tabs{
+.tabs {
 
-font-family: 'PermianSlabSerifTypeface';
-font-style: normal;
-font-weight: 400;
-font-size: 25px;
-line-height: 43px;
-display: flex;
-height: 60px;
+    font-family: 'PermianSlabSerifTypeface';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 43px;
+    display: flex;
+    height: 60px;
 }
+
 .tab {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .tab.unactive {
-    background-color:#D9D9D9;
+    background-color: #D9D9D9;
     color: #858585;
     height: 100%;
 }
+
 .form_rent-ship {
     border: 1px solid #E0E0E0;
     height: 50px;
 }
 
-.form_ticket {
+.form_ticket {}
+
+.form_rent {
     display: none;
 }
 
-.form_rent {
- 
+.quantity_inner * {
+    box-sizing: border-box;
 }
 
-.quantity_inner * {
-    box-sizing: border-box;    
-}    
 .quantity_inner {
     display: flex;
     justify-content: center;
     border: 1px solid #E0E0E0;
-}        
+}
+
 .quantity_inner .bt_minus,
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
- 
-    height: 40px;
-    width: 40px;
+
+    height: 50px;
+    width: 100%;
     padding: 0;
     text-align: center;
     background-color: white;
@@ -1297,63 +1359,80 @@ height: 60px;
 .quantity_inner .quantity {
     border: none;
 }
+
 .route_img-small {
-    display:none;
+    display: none;
 }
 
 
 @media screen and (max-width: 950px) {
 
-    .main_logo_name img{
+    .main_logo_name img {
         width: 698px;
         height: auto;
     }
 
     .main_logo_name div {
-        
-    font-weight: 700;
-    font-size: 18px;
+
+        font-weight: 700;
+        font-size: 18px;
     }
 
     .container {
         max-width: 95%;
-     }
-
-     .ships_title {
-        display:none;
     }
-    
+
+    .order_form-route {
+        position: static;
+        top: unset;
+    }
+
+    .form_ticket,
+    .form_rent {
+        font-size: 16px;
+    }
+
+
+
+
+
+    .ships_title {
+        display: none;
+    }
+
     .ships_title-small {
-        display:block;
+        display: block;
         margin-right: 10px;
     }
 
-     .client-contacts {
-       
-        flex-direction: column;
-     }
+    .client-contacts {
 
-     .boats-nav {
+        flex-direction: column;
+    }
+
+    .boats-nav {
         align-items: flex-end;
         column-gap: 20px;
-     }
+    }
 
     .navigation_crumbs-wrp {
         display: none;
     }
 
-     .icon-boats {
-        display:flex;
+    .icon-boats {
+        display: flex;
         flex-direction: column;
         align-items: center;
         column-gap: 10px;
         row-gap: 5px;
         justify-content: space-between;
-        }
-        .icon-boats:first-child {
-            row-gap: 0;
-        }
-     .main-nav-a {
+    }
+
+    .icon-boats:first-child {
+        row-gap: 0;
+    }
+
+    .main-nav-a {
         display: none;
     }
 
@@ -1369,113 +1448,132 @@ height: 60px;
         max-width: 200px;
         row-gap: 70px;
         margin-left: 10%;
-      }
+    }
 
 
-      .piers_info-main {
+    .piers_info-main {
         grid-column: 1/3;
-    } 
+    }
+
     .map_piers-item {
         grid-column: 2/3;
         grid-row: 2/4;
     }
 
     .piers_button {
-      
-         width: 100%;
+
+        width: 100%;
 
     }
-      .footer-routs, 
-      .footer-fleet,
-      .footer-piers  {
+
+    .footer-routs,
+    .footer-fleet,
+    .footer-piers {
         min-width: 200px;
-      }
-      .footer {
+    }
+
+    .footer {
         column-gap: 20px;
-      }
+    }
+
     .footer-nav {
-        display:grid;
+        display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         row-gap: 30px;
         flex-basis: 70%;
         justify-content: space-between;
-      }
-      .card-small {
+    }
+
+    .card-small {
         display: flex;
         flex-direction: column;
         width: 49%;
     }
+
     /*-------------------------------------*/
-.ship_info {
-    display:flex;
-    flex-direction: row;
-    overflow-x: visible;
-    width: 100%;
-    justify-content: space-between;
-}
+    .ship_info {
+        display: flex;
+        flex-direction: row;
+        overflow-x: visible;
+        width: 100%;
+        justify-content: space-between;
+    }
 
-.ship_info-main {
-    justify-content: space-between;
-}
-.ship_info-1, .ship_info-2 {
-    flex-basis: unset;
-}
-.ship_info-desc
-{
-    width: 40%;
-    margin-top: 0;
-    padding-top: 25px;
-    line-height: 20px;
-}
-.order_form {
-    width:55%;
-    position: unset;
-    top:0;
-    box-shadow: none;
-    padding-bottom: 0;
-}
-.piers_info-name {
-    width: 100%;
-}
-.order_form-route {
- position: absolute;
-   
-    top:50px;
-    right: 10%;
-    box-shadow: none;
-    padding-bottom: 0;
-}
+    .ship_info-main {
+        justify-content: space-between;
+    }
 
-.ship_info-services {
-    width: 100%;
-}
+    .ship_info-1,
+    .ship_info-2 {
+        flex-basis: unset;
+    }
 
-.route_info {
-    width: 100%;
-}
+    .ship_info-desc {
+        width: 40%;
+        margin-top: 0;
+        padding-top: 25px;
+        line-height: 20px;
+    }
 
+    .order_form {
+        width: 55%;
+        position: unset;
+        top: 0;
+        box-shadow: none;
+        padding-bottom: 0;
+    }
 
+    .piers_info-name {
+        width: 100%;
+    }
 
+    .route_info-1 {
+        flex-basis: 100%;
+    }
 
-.boat.active_boat:after, 
-.boat_cap.active_boat_cap:after,
-.boat_cap.active_boat_cap:hover::after,
-.boat_cap:hover::after, 
-.boat:hover::after, 
-.boat.active_boat:hover::after {
-    height: 5px;
-    bottom: -31px;
-}
+    .order_form-route {
 
-.boat.active_boat:after,
-.boat:hover::after, 
-.boat.active_boat:hover::after {
-    bottom: -15px; 
-}
+        box-shadow: 0px 10px 10px rgb(0 0 0 / 4%), 0px 20px 25px -5px rgb(0 0 0 / 10%);
+
+        width: 50%;
+        box-shadow: none;
+        padding-bottom: 0;
+    }
+
+    .route_map {
+        margin-top: unset;
+    }
+
+    .ship_info-services {
+        width: 100%;
+    }
+
+    .route_info {
+        width: 100%;
+    }
 
 
-/*
+
+
+    .boat.active_boat:after,
+    .boat_cap.active_boat_cap:after,
+    .boat_cap.active_boat_cap:hover::after,
+    .boat_cap:hover::after,
+    .boat:hover::after,
+    .boat.active_boat:hover::after {
+        height: 5px;
+        bottom: -31px;
+    }
+
+    .boat.active_boat:after,
+    .boat:hover::after,
+    .boat.active_boat:hover::after {
+        bottom: -15px;
+    }
+
+
+    /*
 
 
 .form_group-1-col {
@@ -1491,7 +1589,7 @@ height: 60px;
 /*.ship_info-desc {
     width: 50%;
 }*/
-/*----------------------------------------
+    /*----------------------------------------
 .client-contacts input {
     display: block;
     height: 50px;
@@ -1501,10 +1599,10 @@ height: 60px;
 }
 */
 
-/*-----------------------------------------*/
+    /*-----------------------------------------*/
 
-    }
-    
+}
+
 
 
 
@@ -1525,9 +1623,11 @@ height: 60px;
     .nav-img {
         display: block;
     }
-.nav-product.without-nav {
-    display: none;
-}
+
+    .nav-product.without-nav {
+        display: none;
+    }
+
     .icon-boats {
 
         display: grid;
@@ -1563,8 +1663,6 @@ height: 60px;
     .client-contacts input {
         display: block;
         height: 50px;
-        flex-basis: 100%;
-        flex-grow: 1;
         border: 1px solid #E0E0E0;
     }
 
@@ -1595,12 +1693,15 @@ height: 60px;
     .boats-nav a {
         width: 100%;
     }
-.ships_title{
-    display: block;
-}
-.ships_title-small {
-    display: none;
-}
+
+    .ships_title {
+        display: block;
+    }
+
+    .ships_title-small {
+        display: none;
+    }
+
     .icon-boats {
         flex-direction: row;
         justify-content: space-between;
@@ -1640,7 +1741,8 @@ height: 60px;
         bottom: 0px;
     }
 
-    main, footer {
+    main,
+    footer {
         width: 100%;
         overflow: hidden;
     }
@@ -1717,7 +1819,8 @@ height: 60px;
         margin: 0 auto;
 
     }
-    .piers_info-wrp, 
+
+    .piers_info-wrp,
     .route_info-wrp,
     .route_info {
         display: block;
@@ -1726,29 +1829,34 @@ height: 60px;
     .route_main {
         width: 100%;
     }
+
     .route_info-1 {
         flex-basis: 100%;
     }
+
     .order_form-route {
         position: unset;
         width: 100%;
     }
+
     .route_img {
         display: none;
     }
 
     .route_img-small {
-        display:unset;
+        display: unset;
     }
-.route_map img {
-    height: 100%;
-}
+
+    .route_map img {
+        height: 100%;
+    }
 
     .map_piers-item img {
         margin-top: 24px;
         margin-bottom: 40px;
         width: 100%;
     }
+
     .list-item .card-small {
         width: 100%;
         margin: auto !important;
@@ -1774,7 +1882,8 @@ height: 60px;
         column-gap: unset;
     }
 
-    .connection, .faq {
+    .connection,
+    .faq {
         width: auto;
     }
 
@@ -1802,9 +1911,9 @@ height: 60px;
         width: 100%;
         display: block;
     }
-  
 
-    .order_form{
+
+    .order_form {
         width: 100%;
         position: unset;
     }
@@ -1830,21 +1939,27 @@ height: 60px;
         row-gap: 20px;
     }
 
-.gallery {
-    display: block;
-    
-}
+    .gallery {
+        display: block;
+
+    }
+
     .gallery-col {
         width: 100%;
     }
 
-    .client-contacts input[name="pier"]
-     {
+    .client-contacts input[name="pier"] {
         display: block;
-         height: unset;
-         flex-basis: unset; 
-         flex-grow: unset;
+        flex-basis: unset;
+        flex-grow: unset;
         border: 1px solid #E0E0E0;
     }
+    .radio input {
+        appearance: none;
+            width: 13px;
+            height: 13px;
+            background-clip: content-box;
+            border: 2px solid #A7A7A7;
+            border-radius: 50%;
+        }
 }
-

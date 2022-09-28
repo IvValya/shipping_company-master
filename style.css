@@ -247,16 +247,16 @@ textarea {
 .boats-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-grow: 1;
     align-items: center;
 
 }
-
+/*
 .icon-excursion {
     flex-grow: 1;
 }
-
+*/
 .icon-boats {
     display: flex;
     align-items: center;

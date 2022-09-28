@@ -607,11 +607,24 @@ max-height: 612px;
     margin-top: 0 !important;
 }
 
-.active_boat, .active_boat_cap {
+.boats-nav img {
+    height: 31px
+}
+
+.boats-nav .boat.active_boat, 
+.boats-nav .boat_cap.active_boat_cap, 
+.boats-nav .boat_cap, 
+.boats-nav .boat {
+
     position: relative;
 }
 
-.active_boat:after, .active_boat_cap:after {
+.boat.active_boat:after, 
+.boat.active_boat:hover::after, 
+.boat_cap.active_boat_cap:hover::after,
+.boat_cap.active_boat_cap:after,
+.boat_cap:hover::after, 
+.boat:hover::after {
     content: '';
     width: 100%;
     height: 3px;
@@ -619,11 +632,26 @@ max-height: 612px;
     display: block;
     position: absolute;
     bottom: -24px;
+   
+}
+.boat:hover::after {
+    background-color: grey;
+    cursor: pointer;
 }
 
-.active_boat_cap:after {
+
+.boat_cap.active_boat_cap:after, 
+.boat_cap.active_boat_cap:hover::after {
     background-color: #6BA5DB;
-    bottom: -29px;
+    bottom: -31px;
+}
+
+
+.boat_cap:hover::after {
+    background-color: grey;
+    bottom: -31px;
+    cursor: pointer;
+  
 }
 
 /*Shrinking for mobile*/
@@ -1201,6 +1229,12 @@ width: 60%;
 	color: #666;
 }
 
+.ships_title-small {
+    display: none;
+}
+
+
+
 
 .tabs{
 
@@ -1217,6 +1251,7 @@ height: 60px;
   width: 100%;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .tab.unactive {
@@ -1284,7 +1319,14 @@ height: 60px;
         max-width: 95%;
      }
 
-   
+     .ships_title {
+        display:none;
+    }
+    
+    .ships_title-small {
+        display:block;
+        margin-right: 10px;
+    }
 
      .client-contacts {
        
@@ -1412,6 +1454,27 @@ height: 60px;
 .route_info {
     width: 100%;
 }
+
+
+
+
+.boat.active_boat:after, 
+.boat_cap.active_boat_cap:after,
+.boat_cap.active_boat_cap:hover::after,
+.boat_cap:hover::after, 
+.boat:hover::after, 
+.boat.active_boat:hover::after {
+    height: 5px;
+    bottom: -31px;
+}
+
+.boat.active_boat:after,
+.boat:hover::after, 
+.boat.active_boat:hover::after {
+    bottom: -15px; 
+}
+
+
 /*
 
 
@@ -1519,7 +1582,12 @@ height: 60px;
         margin-bottom: 20px;
     }
 
-    .active_boat:after, .active_boat_cap:after {
+    .boat.active_boat:after,
+    .boat.active_boat:hover::after,
+    .boat:hover::after,
+    .boat_cap:hover::after,
+    .boat_cap.active_boat_cap:after,
+    .boat_cap.active_boat_cap:hover::after {
         height: 5px;
         bottom: -20px;
     }
@@ -1527,7 +1595,12 @@ height: 60px;
     .boats-nav a {
         width: 100%;
     }
-
+.ships_title{
+    display: block;
+}
+.ships_title-small {
+    display: none;
+}
     .icon-boats {
         flex-direction: row;
         justify-content: space-between;

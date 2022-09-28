@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Смольнинское пароходство. Заказ катеров и теплоходов. Индивидуальные и групповые экскурсии.">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Смольнинское пароходство</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#open_mobile_menu").click(function () {
+                $("#mobile_menu").removeClass("hidden");
+                return false;
+            });
+
+            $("#close_mobile_menu").click(function () {
+                $("#mobile_menu").addClass("hidden");
+                return false;
+            });
+
+            $(".faq-li").click(function () {
+                $(".faq-li").not($(this)).addClass("closed");
+                $(this).toggleClass("closed");
+                return false;
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            function setMarkerActive(id) {
+                $("path[data-marker]").removeClass("st2").addClass("st4");
+                $("path[data-marker-id=" + id + "]").removeClass("st4").addClass("st2");
+            }
+
+            function setListItemActive(id) {
+				$("div[data-element-id]").removeClass("active");
+				$("div[data-element-id=" + id + "]").addClass("active");
+
+				$("div[data-dock_info-id]").removeClass("active");
+				$("div[data-dock_info-id=" + id + "]").addClass("active");
+            }
+
+            $("path[data-marker]").mouseenter(function () {
+                let id = $(this).attr("data-marker-id");
+				setListItemActive(id);
+                setMarkerActive(id);
+            });
+
+            $("div[data-element-id]").mouseenter(function () {
+				let id = $(this).attr("data-element-id");
+				setListItemActive(id);
+				setMarkerActive(id);
+			});
+
+            $("path[data-marker]").mouseleave(function () {
+                /*$(this).addClass("st4");
+                $(this).removeClass("st2");*/
+            });
+            $("path[data-marker]").click(function () {
+				let id = $(this).attr("data-marker-id");
+                window.location.href = "https://google.com";
+            });
+			$("div[data-element-id]").click(function () {
+				let id = $(this).attr("data-element-id");
+				window.location.href = "https://google.com";
+			});
+        });
+    </script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="main_wrp">
+    <!--Mobile nav-->
+
+    <aside id="mobile_menu" class="aside hidden">
+        <div class="aside_wrp">
+            <div class="header-aside">
+                <img src="img/Main_logo.svg" width="257px" height="56px" alt="Основной логотип">
+                <img src="img/icon-close.png" width="25px" height="25px" alt="Закрыть" id="close_mobile_menu">
+            </div>
+            <nav class="aside-nav">
+                <a class="aside-nav-a" href="">Маршруты</a>
+                <a class="aside-nav-a" href="">Флот</a>
+                <a class="aside-nav-a" href="">Причалы</a>
+                <a class="aside-nav-a" href="">События</a>
+                <a class="aside-nav-a" href="">О нас</a>
+                <a class="aside-nav-a" href="">Контакты</a>
+            </nav>
+            <div class="line_div"></div>
+            <div class="aside-footer">
+                <a href="tel:+78129416390">+7(812)941-63-90</a>
+                <span> Санкт-Петербург, наб. Мойки, дом 1/8</span>
+            </div>
+        </div>
+    </aside>
+
+    <header class="site-header">
+        <div class="color-header1">
+            <div class="main-nav container">
+                <div class="logo">
+                    <img src="img/Main_logo.svg" alt="Логотип">
+                </div>
+
+                <nav class="navigation">
+                    <a class="nav-img" href=""><img src="img/menu.svg" alt="Меню" id="open_mobile_menu"></a>
+
+
+                    <a class="main-nav-a" href="/index.html#routes">Маршруты</a>
+                    <a class="main-nav-a" href="/index.html#fleet">Флот</a>
+                    <a class="main-nav-a" href="/index.html#piers">Причалы</a>
+                    <a class="main-nav-a" href="/index.html#events">События</a>
+                    <a class="main-nav-a" href="/index.html#about">О нас</a>
+                    <a class="main-nav-a" href="/index.html#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="color-header2 mobile without-nav">
+            <div class="container nav-product without-nav">
+                <a class="icon-excursion" href="#routes">
+                    <div class="icon-boats">
+                        <img src="img/icon excursions.svg" alt="Экскурсии">
+                        <span>Экскурсии</span>
+                    </div>
+                <div class="boats-nav">
+                    <a href="#speed-boats">
+                        <div class="icon-boats">
+                            <img src="img/icon speedboat.svg" alt="Скоростные катера">
+                            <span>Скоростные катера</span>
+                        </div>
+                    </a>
+
+                    <a href="#cruise-boats">
+                        <div class="icon-boats">
+                            <img src="img/icon cruise.svg" alt="Круизные катера">
+                            <span>Круизные катера</span>
+                        </div>
+                    </a>
+
+                    <a href="#motorships" class="active_boat">
+                        <div class="icon-boats">
+                            <img src="img/icon_ship.svg" width="182px" alt="Теплоходы">
+                            <span>Теплоходы</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+
+    <!--__________________________________________________________________________________________________---->
+
+    <main>
+       
+        
+            
+            <section class="main_piers">
+                <h2>Наши маршруты</h2>
+                <div class="dock_map">
+                    <svg class="svg_map-desct" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         x="0px" y="0px"
+                         viewBox="0 0 1440.5 611.1" style="enable-background:new 0 0 1440.5 611.1;" xml:space="preserve">
+                        <style type="text/css">
+                    .st0 {
+                        clip-path: url(#SVGID_2_);
+                    }
+                
+                    .st1 {
+                        clip-path: url(#SVGID_4_);
+                    }
+                
+                    .st2 {
+                        fill: #F07E13;
+                        stroke: #FFFFFF;
+                        stroke-width: 2.8346;
+                        stroke-miterlimit: 10;
+                    }
+                
+                    .st3 {
+                        clip-path: url(#SVGID_6_);
+                    }
+                
+                    .st4 {
+                        fill: #6BA5DB;
+                        stroke: #FFFFFF;
+                        stroke-width: 2.8346;
+                        stroke-miterlimit: 10;
+                    }
+                
+                    .st5 {
+                        clip-path: url(#SVGID_8_);
+                    }
+                
+                    .st6 {
+                        clip-path: url(#SVGID_10_);
+                    }
+                
+                    .st7 {
+                        clip-path: url(#SVGID_12_);
+                    }
+                
+                    .st8 {
+                        clip-path: url(#SVGID_14_);
+                    }
+                 </style>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_1_" x="-4" y="-130.5" width="1485.9" height="789.8"/>
+                                </defs>
+                                <clipPath id="SVGID_2_">
+                                    <use xlink:href="#SVGID_1_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st0">
+                                        <image style="overflow:visible;enable-background:new;" width="1983" height="1055"
+                                               xlink:href="img/C71330F.png" transform="matrix(0.7486 0 0 0.7486 -3.2969 -130.5087)">
+                                        </image>
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_3_" x="955.6" y="-8.5" width="95" height="97.6"/>
+                                </defs>
+                                <clipPath id="SVGID_4_">
+                                    <use xlink:href="#SVGID_3_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st1">
+                                    <image style="overflow:visible;enable-background:new    ;" width="192" height="198"
+                                           xlink:href="img/C71330D.png" transform="matrix(0.4927 0 0 0.493 955.868 -8.4903)">
+                                    </image>
+                                </g>
+                            </g>
+                        </g>
+                        <path class="st4" data-marker data-marker-id="1"
+                              d="M998.9,71h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C999.1,71.1,998.9,71,998.9,71z"/>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_5_" x="1163.8" y="126.6" width="95" height="97.6"/>
+                                </defs>
+                                <clipPath id="SVGID_6_">
+                                    <use xlink:href="#SVGID_5_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st3">
+                                    <image style="overflow:visible;enable-background:new    ;" width="192" height="198"
+                                           xlink:href="img/C713313.png" transform="matrix(0.4927 0 0 0.493 1164.0243 126.6494)">
+                                    </image>
+                                </g>
+                            </g>
+                        </g>
+                        <path class="st4" data-marker data-marker-id="2"
+                              d="M1207,206.1h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C1207.3,206.3,1207,206.1,1207,206.1z"/>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_7_" x="825.6" y="49.3" width="95" height="97.6"/>
+                                </defs>
+                                <clipPath id="SVGID_8_">
+                                    <use xlink:href="#SVGID_7_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st5">
+                                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196"
+                                           xlink:href="img/C713315.png" transform="matrix(0.4951 0 0 0.4954 825.5977 49.536)">
+                                    </image>
+                                </g>
+                            </g>
+                        </g>
+                        <path class="st4" data-marker data-marker-id="3"
+                              d="M868.8,128.8h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C869.1,128.9,868.8,128.8,868.8,128.8z"/>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_9_" x="1060.6" y="6.9" width="95" height="97.6"/>
+                                </defs>
+                                <clipPath id="SVGID_10_">
+                                    <use xlink:href="#SVGID_9_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st6">
+                                    <image style="overflow:visible;enable-background:new    ;" width="192" height="198"
+                                           xlink:href="img/C713317.png" transform="matrix(0.4927 0 0 0.493 1060.8251 6.8764)">
+                                    </image>
+                                </g>
+                            </g>
+                        </g>
+                        <path class="st4" data-marker data-marker-id="4"
+                              d="M1103.8,86.4h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C1104.1,86.5,1103.8,86.4,1103.8,86.4z"/>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_11_" x="774.6" y="83.3" width="95" height="97.6"/>
+                                </defs>
+                                <clipPath id="SVGID_12_">
+                                    <use xlink:href="#SVGID_11_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st7">
+                                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196"
+                                           xlink:href="img/C713314.png" transform="matrix(0.4951 0 0 0.4954 774.5977 83.536)">
+                                    </image>
+                                </g>
+                            </g>
+                        </g>
+                        <path class="st4" data-marker data-marker-id="5"
+                              d="M817.8,162.8h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C818.1,162.9,817.8,162.8,817.8,162.8z"/>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_13_" x="719.6" y="465.3" width="95" height="97.6"/>
+                                </defs>
+                                <clipPath id="SVGID_14_">
+                                    <use xlink:href="#SVGID_13_" style="overflow:visible;"/>
+                                </clipPath>
+                                <g class="st8">
+                                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196"
+                                           xlink:href="img/C71331C.png" transform="matrix(0.4951 0 0 0.4954 719.5977 465.536)">
+                                    </image>
+                                </g>
+                            </g>
+                        </g>
+                        <path class="st4" data-marker data-marker-id="6"
+                              d="M762.8,544.8h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C763.1,544.9,762.8,544.8,762.8,544.8z"/>
+                    </svg>
+    <!-------------------------------------SVG Tablet---------------------------------------->
+    <svg class="svg_map-tablet" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px"
+         viewBox="0 0 799.7 611.1" style="enable-background:new 0 0 799.7 611.1;" xml:space="preserve">
+    <style type="text/css">
+        .st0 {
+            clip-path: url(#SVGID_2_);
+        }
+    
+        .st1 {
+            clip-path: url(#SVGID_4_);
+        }
+    
+        .st2 {
+            fill: #F07E13;
+            stroke: #FFFFFF;
+            stroke-width: 2.8346;
+            stroke-miterlimit: 10;
+        }
+    
+        .st3 {
+            clip-path: url(#SVGID_6_);
+        }
+    
+        .st4 {
+            fill: #6BA5DB;
+            stroke: #FFFFFF;
+            stroke-width: 2.8346;
+            stroke-miterlimit: 10;
+        }
+    
+        .st5 {
+            clip-path:url(#SVGID_10_);
+            }
+    
+        .st6 {
+            clip-path:url(#SVGID_12_);
+            }
+    
+    </style>
+    <image style="overflow:visible;" width="1983" height="1054" xlink:href="img/94A31D8C.png"  transform="matrix(0.7493 0 0 0.7493 -451.7076 -114.9181)">
+    </image>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_1_" x="328.3" y="87.8" width="95" height="97.6"/>
+            </defs>
+            <clipPath id="SVGID_2_">
+                <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st0">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/94A31D8D.png"  transform="matrix(0.4951 0 0 0.4954 328.2589 88.0448)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="1"
+    d="M371.5,167.3H370c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C371.8,167.4,371.5,167.3,371.5,167.3z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_3_" x="375.8" y="55.4" width="95" height="97.6"/>
+            </defs>
+            <clipPath id="SVGID_4_">
+                <use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st2">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/94A31D8B.png"  transform="matrix(0.4951 0 0 0.4954 375.7589 55.6508)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="2"
+    d="M419,134.9h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C419.3,135,419,134.9,419,134.9z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_5_" x="509.1" y="6.6" width="95" height="97.6"/>
+            </defs>
+            <clipPath id="SVGID_6_">
+                <use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st3">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/94A31D94.png"  transform="matrix(0.4951 0 0 0.4954 509.1428 6.8508)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="3"
+    d="M552.3,86.1h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C552.6,86.2,552.3,86.1,552.3,86.1z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_7_" x="611" y="21.4" width="95" height="97.6"/>
+            </defs>
+            <clipPath id="SVGID_8_">
+                <use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st4">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/94A31D97.png"  transform="matrix(0.4951 0 0 0.4954 611.0424 21.6508)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="4"
+    d="M654.2,100.9h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C654.5,101,654.2,100.9,654.2,100.9z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_9_" x="717" y="146.3" width="95" height="97.6"/>
+            </defs>
+            <clipPath id="SVGID_10_">
+                <use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st5">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/94A31D95.png"  transform="matrix(0.4951 0 0 0.4954 717.0424 146.5189)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="5"
+    d="M760.2,225.8h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C760.5,225.9,760.2,225.8,760.2,225.8z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_11_" x="272" y="476.8" width="95" height="97.6"/>
+            </defs>
+            <clipPath id="SVGID_12_">
+                <use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st6">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/94A31D9B.png"  transform="matrix(0.4951 0 0 0.4954 272.0289 477.0346)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="6" 
+    d="M315.2,556.3h-1.5c0,0,0-0.1-13.8-28.6c-18.9-38.9,46.2-38.9,28.6,0C315.5,556.4,315.2,556.3,315.2,556.3z"/>
+    </svg>
+    
+    
+    
+    
+    <!--------------------------------------SVG Mobile------------------------------------------------>
+    <svg class="svg_map-mobile" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 392.4 387.5" style="enable-background:new 0 0 392.4 387.5;" xml:space="preserve">
+    <style type="text/css">
+        .st0 {
+            clip-path: url(#SVGID_2_);
+        }
+    
+        .st1 {
+            clip-path: url(#SVGID_4_);
+        }
+    
+        .st2 {
+            fill: #F07E13;
+            stroke: #FFFFFF;
+            stroke-width: 2.8346;
+            stroke-miterlimit: 10;
+        }
+    
+        .st3 {
+            clip-path: url(#SVGID_6_);
+        }
+    
+        .st4 {
+            fill: #6BA5DB;
+            stroke: #FFFFFF;
+            stroke-width: 2.8346;
+            stroke-miterlimit: 10;
+        }
+    
+        .st5 { 
+            clip-path:url(#SVGID_10_);
+        }
+    
+        .st6{clip-path:url(#SVGID_12_);
+    
+        }
+    </style>
+    <image style="overflow:visible;" width="1983" height="1054" xlink:href="img/E5360B0C.png"  transform="matrix(0.4706 0 0 0.4706 -426.3499 -55.5941)">
+    </image>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_1_" x="51.8" y="50" width="85.3" height="87.6"/>
+            </defs>
+            <clipPath id="SVGID_2_">
+                <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st0">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196"
+                     xlink:href="img/E5360B0D.png"  transform="matrix(0.4445 0 0 0.4448 51.7812 50.2542)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="1"
+    d="M90.6,121.4h-1.3c0,0,0-0.1-12.4-25.7c-17-34.9,41.5-34.9,25.7,0C90.8,121.5,90.6,121.4,90.6,121.4z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_3_" x="11.8" y="298.8" width="85.3" height="87.6"/>
+            </defs>
+            <clipPath id="SVGID_4_">
+                <use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st2">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196"
+                     xlink:href="img/E5360B0B.png"  transform="matrix(0.4445 0 0 0.4448 11.772 298.9865)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="2"
+    d="M50.6,370.2h-1.3c0,0,0-0.1-12.4-25.7c-17-34.9,41.5-34.9,25.7,0C50.8,370.2,50.6,370.2,50.6,370.2z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_5_" x="89.5" y="25.7" width="85.3" height="87.6"/>
+            </defs>
+            <clipPath id="SVGID_6_">
+                <use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st3">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/E5360B14.png"  transform="matrix(0.4445 0 0 0.4448 89.4793 25.9446)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="3"
+    d="M128.3,97.1h-1.3c0,0,0-0.1-12.4-25.7c-17-34.9,41.5-34.9,25.7,0C128.5,97.2,128.3,97.1,128.3,97.1z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_7_" x="165.8" y="-1.9" width="85.3" height="87.6"/>
+            </defs>
+            <clipPath id="SVGID_8_">
+                <use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st4">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/E5360B17.png"  transform="matrix(0.4445 0 0 0.4448 165.7485 -1.6839)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="4"
+    d="M204.5,69.5h-1.3c0,0,0-0.1-12.4-25.7c-17-34.9,41.5-34.9,25.7,0C204.8,69.6,204.5,69.5,204.5,69.5z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_9_" x="231.8" y="9.5" width="85.3" height="87.6"/>
+            </defs>
+            <clipPath id="SVGID_10_">
+                <use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st5">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196" 
+                    xlink:href="img/E5360B15.png"  transform="matrix(0.4445 0 0 0.4448 231.7485 9.6933)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="5"
+    d="M270.5,80.9h-1.3c0,0,0-0.1-12.4-25.7c-17-34.9,41.5-34.9,25.7,0C270.8,81,270.5,80.9,270.5,80.9z"/>
+    <g>
+        <g>
+            <defs>
+                <rect id="SVGID_11_" x="298.6" y="85.7" width="85.3" height="87.6"/>
+            </defs>
+            <clipPath id="SVGID_12_">
+                <use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+            </clipPath>
+            <g class="st6">
+                
+                    <image style="overflow:visible;enable-background:new    ;" width="192" height="196"
+                     xlink:href="img/E5360B1B.png"  transform="matrix(0.4445 0 0 0.4448 298.6469 85.9474)">
+                </image>
+            </g>
+        </g>
+    </g>
+    <path class="st4" data-marker data-marker-id="6"
+    d="M337.4,157.1h-1.3c0,0,0-0.1-12.4-25.7c-17-34.9,41.5-34.9,25.7,0C337.7,157.2,337.4,157.1,337.4,157.1z"/>
+    </svg>
+    
+    
+    
+    <!-------------------------------------------------------------------------------------------->                
+                    <div class="docks_wrp">
+                        <div class="docks">
+                            <div class="dock" data-element-id="1">Набережная Фонтанки 34</div>
+                            <div class="dock" data-element-id="2">Набережная Фонтанки 142</div>
+                            <div class="dock" data-element-id="3">Набережная Мойки 23</div>
+                            <div class="dock" data-element-id="4">Павильон Зодчего Росси</div>
+                            <div class="dock" data-element-id="5">Медный Всадник</div>
+                            <div class="dock" data-element-id="6">Адмиралтейская наб. 8</div>
+                            <div class="dock" data-element-id="7">Летний сад</div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="1">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 1
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="2">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 2
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="3">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 3
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="4">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 4
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="5">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 5
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="6">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 6
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_info" data-dock_info-id="7">
+                            <div class="dock_info-img">
+                                <img src="img/sputnik.jpg">
+                            </div>
+                            <div class="dock_info-txt">
+                                from id 7
+                                <p>
+                                    Причал расположен в пяти минутах ходьбы от Дворцовой площади, и Марсова поля в живописном месте на
+                                    набережной реки Мойки.
+                                </p>
+                                <p>
+                                    Комфортная, тихая, немноголюдная локация, идеальная для начала прогулки по рекам и
+                                    каналам
+                                </p>
+                                <div class="dock_info-link">
+                                    <a href="">подробно о причале</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+           
+            </section>
+    
+
+        <div class="divider"></div>
+        <div class="container">
+            <section class="about">
+                <div class="about-cols">
+                    <p>Компания «Смольнинское Пароходство» предлагает увлекательные экскурсии и прогулки по рекам и
+                        каналам
+                        Санкт-Петербурга. Мы предоставляем в ваше распоряжение комфортабельные теплоходы высокого
+                        класса,
+                        соответствующие всем требованиям безопасности, и оборудованные средствами, сделающими ваше
+                        путешествие
+                        удобным и комфортным.</p>
+
+                    <p>К вашим услугам – команда профессиональных экскурсоводов и капитанов, которые помогут сделать
+                        вашу
+                        прогулку незабываемой.</p>
+
+                    <p>Мы предлагаем как популярные туристические маршруты, так и эксклюзивные экскурсии, в ходе
+                        которых вы
+                        увидите город с нового ракурса.</p>
+                    <p>Организованные экскурсии по водным артериям Санкт-Петербурга, индивидуальные прогулки, ночная
+                        прогулка
+                        под разведенными мостами, проведение корпоративных вечеринок, выпускных вечеров, банкетов и
+                        семейных
+                        торжеств на комфортабельном теплоходе – мы рады организовать для вас любое мероприятие.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="divider footer-divider"></div>
+
+        <section class="background-info">
+            <div class="container info">
+                <div class="faq">
+                    <h2>FAQ</h2>
+                    <ul>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Как забронировать?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А дети считаются за людей?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А с собакой к вам можно?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А можно просто катер взять на несколько часов?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Мне кажется, меня укачает</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">Почему без гида дороже?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                        <li class="faq-li closed">
+                            <span class="faq-a" href="#">А кто гид?</span>
+                            <span class="faq-txt">
+                            Можно, но вы же не просто будете стоять на одном месте, поэтому желательно выбрать вояж и там кликнуть на опцию "без гида". А если и правда хотите делать, что заблагорассудится — оставьте нам заявку в самом низу главной страницы или в мессенджерах. Мы с вами быстро свяжемся и всё согласуем.
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="connection">
+                    <h2>Связаться с нами</h2>
+                    <form method="post" action="">
+                        <div class="client-contacts">
+                            <div class="form-input">
+                                <label for="client-name">Имя</label>
+                                <input type="text" id="client-name" name="client-name" placeholder="Ваше имя"
+                                       required="">
+                            </div>
+                            <div class="form-input">
+                                <label or="client-tel">Телефон</label>
+                                <input type="tel" id="client-tel" name="client-tel" placeholder="+7___ ___ __ __"
+                                       required="">
+                            </div>
+                        </div>
+                        <label for="client-message">Сообщение</label>
+                        <textarea rows="5" id="client-message" name="client-message"
+                                  placeholder="Текст сообщения"></textarea>
+                        <button type="submit" name="SubmitForm" value="submit-form">Отправить</button>
+                        <span>Нажимая на кнопку вы соглашаетесь с <a class="details"
+                                                                     href="">политикой конфидециальности</a></span>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-waves"></div>
+        <div class="footer-main container full">
+            <div class="footer container">
+                <div id="contacts" class="contacts">
+                    <img src="img/Frame.svg" width="63px" height="41px" alt="Короткий логотип">
+                    <address class="footer-address">
+                        <a href="tel:+78129416390">+7(812)941-63-90</a>
+                        <a href="mailto:lodka_07@mail.ru">lodka_07@mail.ru</a>
+                        <span> Санкт-петербург, наб. Мойки, дом 1/8</span>
+                    </address>
+                </div>
+
+                <div class="footer-nav">
+
+                    <div class="footer-routs">
+                        <a class="footer-nav-a" href="/index.html#routes">Маршруты</a>
+                        <a class="nav-a" href="">Северные острова</a>
+                        <a class="nav-a" href="">Северная Венеция</a>
+                        <a class="nav-a" href="">Парадный Петербург</a>
+                        <a class="nav-a" href="">Весь Петербург</a>
+                        <a class="nav-a" href="">Реки и каналы</a>
+                        <a class="nav-a" href="">Залив и пригороды</a>
+                    </div>
+                    <div class="footer-fleet">
+                        <a class="footer-nav-a" href="/index.html#fleet">Флот</a>
+                        <a class="nav-a" href="">Весь флот</a>
+                        <a class="nav-a" href="">Теплоходы</a>
+                        <a class="nav-a" href="">Яхты</a>
+                        <a class="nav-a" class="nav-a" href="">Катера</a>
+                        <a class="nav-a" class="nav-a" href="">Скоростные катера</a>
+                    </div>
+                    <div class="footer-piers">
+                        <a class="footer-nav-a" href="/index.html#piers">Причалы</a>
+                        <a class="nav-a" href="">Набережная Фонтанки 34</a>
+                        <a class="nav-a" href="">Набережная Фонтанки 142</a>
+                        <a class="nav-a" href="">Набережная Мойки 23</a>
+                        <a class="nav-a" href="">Павильон Зодчего Росси</a>
+                        <a class="nav-a" href="">Медный Всадник</a>
+                        <a class="nav-a" href="">Адмиралтейская наб. 8</a>
+                        <a class="nav-a" href="">Летний сад</a>
+
+                    </div>
+                    <div class="footer-other">
+                        <div class="footer-other-nav">
+                            <a class="footer-nav-a" href="">События</a>
+                            <a class="footer-nav-a" href="/index.html#about">О нас</a>
+                            <a class="footer-nav-a" href="/index.html#contacts">Контакты</a>
+                        </div>
+                        <a href=""><img class="favicons" src="img/VK.svg" alt="ВКонтакте"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_delim"></div>
+            <div class="copyright container">
+                <p> &COPY; Все права защищены. Смольнинское пароходство 2022</p>
+                <a class="nav-a" href="">Разработка и продвижение сайта ONE GOGH</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+
+</html>

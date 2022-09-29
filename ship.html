@@ -155,7 +155,7 @@
         </section>
 
         <section class="ship_info-wrp container">
-            
+
                 <div class="ship_info-main">
                     <div class="ship_info-1">
                         <h2 class="ship_info-name">Теплоход «Монарх»</h2>
@@ -168,7 +168,7 @@
                 </div>
 
 
-           
+
                 <div class="ship_info">
                     <div class="ship_info-desc">
                         <p>Теплоход «Монарх» — флагман флота компании «Смольнинское параходство». Этот современный и комфортабельный лайнер может принять на своем борту 60 человек.</p>
@@ -176,8 +176,8 @@
                         <p>Экскурсия на теплоходе «Монарх» пройдет удачно при любой погоде, ведь в случае ненастья вы сможете спуститься в уютный салон.</p>
                         <div class="ship_info-div"></div>
                     </div>
-                    
-                    
+
+
                     <div class="order_form">
                         <h2>Арендовать теплоход</h2>
                         <form method="post" action="">
@@ -261,8 +261,67 @@
 
 
         <div class="divider"></div>
-    
-        
+
+        <!-- swiper begin -->
+        <link rel="stylesheet" href="swiper/swiper-bundle.min.css"/>
+        <style>
+            .swiper-button-next {
+                color: #000;
+            }
+            .swiper-button-prev {
+                color: #000;
+            }
+        </style>
+        <script src="swiper/swiper-bundle.min.js"></script>
+        <div
+                style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                class="swiper mySwiper"
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="img/image_size_2.png" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="img/image_size_8_1.png" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="img/image_size_8_2.png" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="img/image_size_4.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                zoom: true,
+                centeredSlides: true,
+                loop: true,
+                autoHeight: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+        <!-- swiper end -->
+
+        <!--
         <section class="gallery">
             <div class="gallery_img gallery_img_2">
                 <img src="img/image_size_2.png">
@@ -276,9 +335,8 @@
             <div class="gallery_img gallery_img_4">
                 <img src="img/image_size_4.png">
             </div>
-  
-
         </section>
+        -->
 
         <div class="container">
             <section id="routes" class="routes">

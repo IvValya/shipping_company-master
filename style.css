@@ -383,6 +383,7 @@ textarea {
 
 .route_info-wrp {
     min-height: 720px;
+    justify-content: unset;
 }
 
 /*

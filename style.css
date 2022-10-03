@@ -247,10 +247,10 @@ textarea {
 .boats-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-grow: 1;
     align-items: center;
-
+    column-gap: 3%;
 }
 /*
 .icon-excursion {
@@ -262,6 +262,22 @@ textarea {
     align-items: center;
     column-gap: 10px;
 }
+
+
+.boat_cap {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.boat_cap:first-child {
+    justify-content: flex-start;
+}
+
+.boat_cap:last-child {
+    justify-content: end;
+}
+
 
 
 /*Главная страница-----------------------*/
@@ -607,6 +623,8 @@ textarea {
 
 .ship_info-desc {
     margin-top: 50px;
+    text-align: justify;
+    
 }
 
 .ship_info-div {
@@ -653,7 +671,7 @@ textarea {
     display: block;
     position: absolute;
     bottom: -24px;
-
+    /*left: -20px;*/
 }
 
 .boat:hover::after {
@@ -769,6 +787,10 @@ textarea {
     color: #949494;
 }
 
+.faq ul, .faq h2 {
+    padding: 0;
+    margin-left: 40px;
+}
 
 .faq .faq-li {
     margin-bottom: 30px;
@@ -1234,7 +1256,7 @@ footer {
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     row-gap: 30px;
     width: 60%;
 }
@@ -1823,6 +1845,10 @@ footer {
         row-gap: 30px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .boat_cap {
+        display: unset;
     }
 
     .boat.active_boat:after,

@@ -252,16 +252,20 @@ textarea {
     align-items: center;
     column-gap: 3%;
 }
-/*
+
 .icon-excursion {
-    flex-grow: 1;
+    margin-right: 80px;
 }
-*/
+
 .icon-boats {
     display: flex;
     align-items: center;
     column-gap: 10px;
 }
+
+
+
+
 
 
 .boat_cap {
@@ -1501,6 +1505,10 @@ footer {
         font-size: 16px;
     }
 
+    .icon-excursion {
+        margin-right: 60px;
+    }
+
 
     .ships_title {
         display: none;
@@ -1773,7 +1781,7 @@ footer {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .divider.footer-divider {
         background-image: url(img/footer_divider_mobile.svg);
     }

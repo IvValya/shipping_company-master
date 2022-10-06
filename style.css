@@ -727,13 +727,18 @@ textarea {
 }
 
 .list-item {
-    display: flex;
+    /*display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 30px;
     column-gap: 10px;
-    width: 100%;
+    width: 100%;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 10px;
+
 }
 
 
@@ -1160,7 +1165,7 @@ footer {
 .card-small {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 .card-big {
@@ -1541,6 +1546,10 @@ footer {
         margin-right: 60px;
     }
 */
+
+    .list-item {
+        grid-template-columns: 1fr 1fr;
+    }
   
     .ships_title {
         display: none;
@@ -1643,7 +1652,7 @@ footer {
     .card-small {
         display: flex;
         flex-direction: column;
-        width: 49%;
+       
     }
 
     /*-------------------------------------*/
@@ -1926,6 +1935,12 @@ footer {
 
     .boats-nav a {
         width: 100%;
+    }
+
+    .list-item 
+    {
+        display: flex;
+        flex-direction: column;
     }
 
     .ships_title {

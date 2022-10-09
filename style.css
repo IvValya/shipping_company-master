@@ -1392,10 +1392,10 @@ footer {
     height: 50px;
 }
 
-.order_form-route form {
+.order_form-route div {
     display: none;
 }
-.order_form-route form.active {
+.order_form-route div.active {
     display:flex;
 }
 

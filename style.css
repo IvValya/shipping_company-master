@@ -1392,10 +1392,10 @@ footer {
     height: 50px;
 }
 
-.order_form-route div {
+.order_form-route div:not(.tabs) {
     display: none;
 }
-.order_form-route div.active {
+.order_form-route div:not(.tabs).active {
     display:flex;
 }
 

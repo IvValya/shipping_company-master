@@ -15,6 +15,7 @@
             });
 
             $("#close_mobile_menu").click(function () {
+                document.querySelector(".aside").style.minHeight = document.documentElement.clientHeight+"px";
                 $("#mobile_menu").addClass("hidden");
                 return false;
             });

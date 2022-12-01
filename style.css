@@ -1094,7 +1094,6 @@ footer {
     background-color: #003B66;
     top: 0;
     z-index: 4;
-    height: 100vh;
     mix-blend-mode: normal;
     overflow: hidden;   
     position: absolute;
@@ -1113,10 +1112,9 @@ footer {
 }
 
 .aside_wrp {
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     min-width: 300px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;

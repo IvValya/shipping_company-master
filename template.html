@@ -15,7 +15,6 @@
             });
 
             $("#close_mobile_menu").click(function () {
-                document.querySelector(".aside").style.minHeight = document.documentElement.clientHeight+"px";
                 $("#mobile_menu").addClass("hidden");
                 return false;
             });
@@ -294,7 +293,11 @@
         </div>
     </footer>
 </div>
-
+<script>
+   $(window).on('load resize',()=> {
+    document.querySelector(".aside").style.minHeight = window.innerHeight +"px";
+   })
+   </script>
 </body>
 
 </html>

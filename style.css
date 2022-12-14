@@ -1109,6 +1109,7 @@ footer {
 .aside.hidden {
     right: -100vw;
     transition: right linear 0.3s;
+    position: fixed;
 }
 
 .aside_wrp {

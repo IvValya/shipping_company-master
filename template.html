@@ -11,11 +11,13 @@
         $(function () {
             $("#open_mobile_menu").click(function () {
                 $("#mobile_menu").removeClass("hidden");
+                document.body.style.overflow = "hidden";
                 return false;
             });
 
             $("#close_mobile_menu").click(function () {
                 $("#mobile_menu").addClass("hidden");
+                document.body.style.overflow = "auto";
                 return false;
             });
 
